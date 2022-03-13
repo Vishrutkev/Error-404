@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/exitIconButton"
         android:layout_width="56dp"
         android:layout_height="60dp"
         android:adjustViewBounds="true"
@@ -16,10 +16,24 @@
         app:layout_constraintBottom_toTopOf="@+id/difficultySelectionHeading"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.784"
-        app:layout_constraintStart_toEndOf="@+id/imageButton7"
+        app:layout_constraintStart_toEndOf="@+id/helpIconButton"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.35"
         app:srcCompat="@drawable/exitIcon" />
+
+    <ImageButton
+        android:id="@+id/helpIconButton"
+        android:layout_width="71dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="48dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/difficultySelectionHeading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.341"
+        app:srcCompat="@drawable/helpIcon" />
 
     <TextView
         android:id="@+id/difficultySelectionHeading"
@@ -71,18 +85,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/difficultySelectionHeading" />
 
-    <ImageButton
-        android:id="@+id/imageButton7"
-        android:layout_width="71dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="48dp"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/difficultySelectionHeading"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.341"
-        app:srcCompat="@drawable/helpIcon" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
