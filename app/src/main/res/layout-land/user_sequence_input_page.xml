@@ -10,7 +10,8 @@
         android:id="@+id/exitIconButton"
         android:layout_width="56dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="80dp"
         android:adjustViewBounds="true"
         android:background="@null"
         android:scaleType="fitCenter"
@@ -26,7 +27,8 @@
         android:id="@+id/helpIconButton"
         android:layout_width="71dp"
         android:layout_height="60dp"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="24dp"
         android:adjustViewBounds="true"
         android:background="@null"
         android:scaleType="fitCenter"
@@ -42,7 +44,7 @@
         android:layout_height="wrap_content"
         android:text="Guess the\nsequence"
         android:textAlignment="center"
-        android:textSize="48sp"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -58,33 +60,34 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/checkButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/guessSequenceHeading"
-        app:layout_constraintVertical_bias="0.333" />
+        app:layout_constraintVertical_bias="0.23" />
 
     <Button
         android:id="@+id/checkButton"
-        android:layout_width="181dp"
-        android:layout_height="74dp"
+        android:layout_width="157dp"
+        android:layout_height="50dp"
         android:text="CHECK"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guessSequenceHeading" />
+        app:layout_constraintTop_toBottomOf="@+id/guessSequenceHeading"
+        app:layout_constraintVertical_bias="0.77" />
 
     <TextView
         android:id="@+id/currentScoreLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+        android:layout_marginStart="220dp"
         android:text="Current Score:"
         app:layout_constraintBottom_toTopOf="@+id/checkButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/numSequenceBox"
-        app:layout_constraintVertical_bias="0.464" />
+        app:layout_constraintVertical_bias="0.461" />
 
     <EditText
         android:id="@+id/currentScoreBox"
@@ -94,10 +97,10 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/checkButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.328"
+        app:layout_constraintHorizontal_bias="0.133"
         app:layout_constraintStart_toEndOf="@+id/currentScoreLabel"
         app:layout_constraintTop_toBottomOf="@+id/numSequenceBox"
-        app:layout_constraintVertical_bias="0.507" />
+        app:layout_constraintVertical_bias="0.6" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
