@@ -16,6 +16,7 @@ public class NumGameModel {
      * @return None
      */
     public void readyButton() {
+        int i=0;
         throw new UnsupportedOperationException();
     }
 
