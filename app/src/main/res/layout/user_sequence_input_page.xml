@@ -10,16 +10,17 @@
         android:id="@+id/exitIconButton"
         android:layout_width="56dp"
         android:layout_height="60dp"
+        android:layout_marginEnd="48dp"
         android:adjustViewBounds="true"
         android:background="@null"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/guessSequenceHeading"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.784"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/helpIconButton"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35"
-        app:srcCompat="@drawable/exitIcon" />
+        app:layout_constraintVertical_bias="0.34"
+        app:srcCompat="@drawable/exiticon" />
 
     <ImageButton
         android:id="@+id/helpIconButton"
@@ -33,7 +34,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.341"
-        app:srcCompat="@drawable/helpIcon" />
+        app:srcCompat="@drawable/helpicon" />
 
     <TextView
         android:id="@+id/guessSequenceHeading"

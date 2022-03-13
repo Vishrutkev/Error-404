@@ -10,16 +10,17 @@
         android:id="@+id/exitIconButton"
         android:layout_width="56dp"
         android:layout_height="60dp"
+        android:layout_marginEnd="48dp"
         android:adjustViewBounds="true"
         android:background="@null"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/correctInputHeading"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.784"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/helpIconButton"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35"
-        app:srcCompat="@drawable/exitIcon" />
+        app:layout_constraintVertical_bias="0.34"
+        app:srcCompat="@drawable/exiticon" />
 
     <ImageButton
         android:id="@+id/helpIconButton"
@@ -33,7 +34,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.341"
-        app:srcCompat="@drawable/helpIcon" />
+        app:srcCompat="@drawable/helpicon" />
 
     <TextView
         android:id="@+id/correctInputHeading"
@@ -67,19 +68,24 @@
         android:id="@+id/currentScoreLabel"
         android:layout_width="132dp"
         android:layout_height="37dp"
+        android:layout_marginTop="36dp"
         android:text="Current Score:"
         android:textAlignment="center"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="139dp"
-        tools:layout_editor_absoluteY="335dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correctInputHeading" />
 
     <EditText
         android:id="@+id/currentScoreBox"
         android:layout_width="137dp"
         android:layout_height="45dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="137dp"
-        tools:layout_editor_absoluteY="392dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentScoreLabel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
