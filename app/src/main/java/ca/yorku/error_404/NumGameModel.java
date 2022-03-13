@@ -11,7 +11,7 @@ public class NumGameModel {
         throw new UnsupportedOperationException();
     }
 
-    public void PlayButto(){
+    public void PlayButton(){
         throw new UnsupportedOperationException();
     }
 
