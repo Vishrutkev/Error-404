@@ -133,16 +133,6 @@ public class NumGameModel {
     }
 
     /**
-     * Method to call generateRandomNumber() and add
-     * a new number to the sequence needed to memorize
-     *
-     * @return None
-     */
-    public void addToSequence() {
-        throw new UnsupportedOperationException();
-    }
-
-    /**
      * Method to update user's high score if latestScore
      * is greater than previous high score
      *
