@@ -12,9 +12,9 @@ public class NumGameModel {
      * @return int from 1-9
      */
     private int difficulty = 0;
+    private int[] randNumList = {};
 
-    public static int[] generateRandomNumber(int difficulty) {
-        int randNumList[] = {};
+    public int[] generateRandomNumber(int difficulty) {
         Random rnd = new Random();
         for (int i = 0; i < difficulty; i++) {
             int randNum = rnd.nextInt(9) + 1;
