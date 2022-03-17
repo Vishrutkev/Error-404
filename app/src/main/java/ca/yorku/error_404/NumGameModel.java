@@ -7,7 +7,8 @@ public class NumGameModel {
 
     /**
      * Method to to generate a random double value
-     *
+     * For loop to generate 1,2 or 3 random numbers depending on the users difficulty selection
+     * Adds generated random nunmber to the end of the memorization sequence
      * @param difficulty int type for difficulty level user selected
      * @return int from 1-9
      */
@@ -118,7 +119,6 @@ public class NumGameModel {
      * easy (1) = 1 points each correct user guess
      * medium (2) = 2 points each correct user guess
      * hard (3) = 3 points each correct user guess
-     *
      * @return int
      */
     public int selectDifficulty(int userselection) {
