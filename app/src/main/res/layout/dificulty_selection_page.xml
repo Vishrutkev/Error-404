@@ -15,76 +15,75 @@
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/difficultySelectionHeading"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.784"
+        app:layout_constraintHorizontal_bias="0.971"
         app:layout_constraintStart_toEndOf="@+id/helpIconButton"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.35"
+        app:layout_constraintVertical_bias="0.053"
         app:srcCompat="@drawable/exiticon" />
 
     <ImageButton
         android:id="@+id/helpIconButton"
         android:layout_width="71dp"
         android:layout_height="60dp"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="16dp"
         android:adjustViewBounds="true"
         android:background="@null"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@+id/difficultySelectionHeading"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.341"
+        app:layout_constraintVertical_bias="0.05"
         app:srcCompat="@drawable/helpicon" />
 
     <TextView
         android:id="@+id/difficultySelectionHeading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Select Your\nDifficulty Level"
+        android:layout_width="635dp"
+        android:layout_height="219dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="124dp"
+        android:text="Select Your \nDifficulty Level"
         android:textAlignment="center"
         android:textSize="48sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.29" />
+        app:layout_constraintVertical_bias="0.026" />
 
     <Button
-        android:id="@+id/easyButton"
-        android:layout_width="115dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="16dp"
+        android:id="@+id/button37"
+        android:layout_width="225dp"
+        android:layout_height="60dp"
+        android:text="Medium"
+        app:layout_constraintBottom_toTopOf="@+id/button38"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button39" />
+
+    <Button
+        android:id="@+id/button39"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
         android:text="Easy"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button37"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/difficultySelectionHeading" />
 
     <Button
-        android:id="@+id/mediumButton"
-        android:layout_width="115dp"
-        android:layout_height="42dp"
-        android:text="Medium"
-        android:textAlignment="center"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/hardButton"
-        app:layout_constraintStart_toEndOf="@+id/easyButton"
-        app:layout_constraintTop_toBottomOf="@+id/difficultySelectionHeading" />
-
-    <Button
-        android:id="@+id/hardButton"
-        android:layout_width="115dp"
-        android:layout_height="42dp"
-        android:layout_marginEnd="16dp"
+        android:id="@+id/button38"
+        android:layout_width="275dp"
+        android:layout_height="60dp"
         android:text="Hard"
-        android:textAlignment="center"
-        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/difficultySelectionHeading" />
-
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button37" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
