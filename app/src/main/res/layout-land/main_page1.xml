@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="Number\nMemorization\nGame"
         android:textAlignment="center"
-        android:textSize="38sp"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -22,8 +22,8 @@
 
     <Button
         android:id="@+id/playButton1"
-        android:layout_width="152dp"
-        android:layout_height="52dp"
+        android:layout_width="165dp"
+        android:layout_height="55dp"
         android:text="PLAY"
         android:textAlignment="center"
         android:textSize="20sp"
