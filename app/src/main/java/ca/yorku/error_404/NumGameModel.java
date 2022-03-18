@@ -29,6 +29,10 @@ public class NumGameModel {
         return randNumList;
     }
 
+    public void PlayButton(){
+        throw new UnsupportedOperationException();
+    }
+
     /**
      * Method to redirect user to user_sequence_input_page.xml
      *
