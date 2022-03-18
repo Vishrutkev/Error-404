@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Ryan/AndroidStudioProjects/Error-404/app/src/main/res/drawable-finger/help_popup_background.xml" value="0.1635" />
         <entry key="..\:/Users/Ryan/AndroidStudioProjects/Error-404/app/src/main/res/drawable/ic_launcher_background.xml" value="0.34270833333333334" />
         <entry key="..\:/Users/Ryan/AndroidStudioProjects/Error-404/app/src/main/res/layout-land/correct_input_score_page.xml" value="0.278125" />
         <entry key="..\:/Users/Ryan/AndroidStudioProjects/Error-404/app/src/main/res/layout-land/difficulty_selection_page.xml" value="0.278125" />
