@@ -11,6 +11,10 @@ public class NumGameModel {
         throw new UnsupportedOperationException();
     }
 
+    public void PlayButton(){
+        throw new UnsupportedOperationException();
+    }
+
     /**
      * Method to redirect user to user_sequence_input_page.xml
      * @return None
