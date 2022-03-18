@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Error404">
         <activity
+            android:name=".Number_Sequence_Page"
+            android:exported="false" />
+        <activity
+            android:name=".MainPage2"
+            android:exported="false" />
+        <activity
             android:name=".DifficultySelectionPage"
             android:exported="false" />
         <activity

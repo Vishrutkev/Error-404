@@ -26,14 +26,16 @@
         <entry key="app/src/main/res/layout-land/difficulty_selection_page.xml" value="0.178125" />
         <entry key="app/src/main/res/layout-land/incorrect_input_score_page.xml" value="0.178125" />
         <entry key="app/src/main/res/layout-land/main_page1.xml" value="0.1" />
-        <entry key="app/src/main/res/layout-land/main_page2.xml" value="0.13125" />
+        <entry key="app/src/main/res/layout-land/main_page2.xml" value="0.33724822998046877" />
         <entry key="app/src/main/res/layout-land/number_sequence_page.xml" value="0.13125" />
         <entry key="app/src/main/res/layout/correct_input_score_page.xml" value="0.2171875" />
         <entry key="app/src/main/res/layout/difficulty_selection_page.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/dificulty_selection_page.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/dificulty_selection_page.xml" value="0.25" />
         <entry key="app/src/main/res/layout/incorrect_input_score_page.xml" value="0.2171875" />
         <entry key="app/src/main/res/layout/main_page1.xml" value="0.165" />
         <entry key="app/src/main/res/layout/main_page2.xml" value="0.2171875" />
+        <entry key="app/src/main/res/layout/main_pagee2.xml" value="0.2708333333333333" />
+        <entry key="app/src/main/res/layout/number_sequence__page.xml" value="0.28489583333333335" />
         <entry key="app/src/main/res/layout/number_sequence_page.xml" value="0.2171875" />
         <entry key="app/src/main/res/layout/user_sequence_input_page.xml" value="0.2171875" />
       </map>
@@ -41,5 +43,12 @@
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.28489583333333335" />
+      </ProjectState>
+    </option>
   </component>
 </project>
