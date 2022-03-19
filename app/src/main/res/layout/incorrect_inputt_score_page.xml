@@ -40,7 +40,7 @@
         android:layout_height="146dp"
         android:text="Incorrect\nInput!"
         android:textAlignment="center"
-        android:textSize="48sp"
+        android:textSize="44sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,8 +103,8 @@
 
     <Button
         android:id="@+id/returntoMainpagebutton"
-        android:layout_width="188dp"
-        android:layout_height="60dp"
+        android:layout_width="167dp"
+        android:layout_height="55dp"
         android:text="Return To\nMain Page"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"

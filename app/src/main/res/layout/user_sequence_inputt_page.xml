@@ -40,7 +40,7 @@
         android:layout_height="135dp"
         android:text="Guess The\nSequence!"
         android:textAlignment="center"
-        android:textSize="44sp"
+        android:textSize="43sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,7 +67,7 @@
         android:layout_height="26dp"
         android:text="Current Score:"
         android:textAlignment="center"
-        android:textSize="17sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.395"
@@ -90,8 +90,8 @@
 
     <Button
         android:id="@+id/checkButton"
-        android:layout_width="171dp"
-        android:layout_height="60dp"
+        android:layout_width="167dp"
+        android:layout_height="55dp"
         android:rotationX="2"
         android:rotationY="1"
         android:text="Check"

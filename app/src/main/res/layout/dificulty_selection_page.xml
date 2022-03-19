@@ -43,7 +43,7 @@
         android:layout_centerHorizontal="true"
         android:text="Select Your\nDifficulty Level"
         android:textAlignment="center"
-        android:textSize="50sp"
+        android:textSize="47sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,8 +55,8 @@
     <Button
         android:id="@+id/mediumButton"
         android:layout_width="225dp"
-        android:layout_height="60dp"
-        android:rotationX="10"
+        android:layout_height="57dp"
+        android:rotationX="8"
         android:text="Medium"
         android:textSize="17sp"
         app:layout_constraintBottom_toTopOf="@+id/hardButton"
@@ -67,8 +67,8 @@
 
     <Button
         android:id="@+id/easyButton"
-        android:layout_width="170dp"
-        android:layout_height="60dp"
+        android:layout_width="167dp"
+        android:layout_height="55dp"
         android:rotationX="10"
         android:text="Easy"
         android:textSize="16sp"
@@ -80,8 +80,8 @@
     <Button
         android:id="@+id/hardButton"
         android:layout_width="308dp"
-        android:layout_height="61dp"
-        android:rotationX="10"
+        android:layout_height="59dp"
+        android:rotationX="6"
         android:text="Hard"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"

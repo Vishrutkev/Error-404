@@ -42,7 +42,7 @@
         android:layout_height="118dp"
         android:text="Memorize The\nSequence"
         android:textAlignment="center"
-        android:textSize="38sp"
+        android:textSize="40sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,8 +65,8 @@
 
     <Button
         android:id="@+id/readyButton"
-        android:layout_width="116dp"
-        android:layout_height="45dp"
+        android:layout_width="167dp"
+        android:layout_height="55dp"
         android:rotationX="2"
         android:text="Ready"
         android:textSize="16sp"
