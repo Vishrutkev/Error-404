@@ -76,11 +76,11 @@
         app:layout_constraintVertical_bias="0.064" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/playAgainbutton"
         android:layout_width="169dp"
         android:layout_height="60dp"
         android:rotationY="2"
-        android:text="Play"
+        android:text="Play Again"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
