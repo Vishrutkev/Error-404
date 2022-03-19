@@ -18,11 +18,20 @@ public class DifficultySelectionPage extends AppCompatActivity {
         setContentView(R.layout.dificulty_selection_page);
 
         ImageButton helpPopupBtn = (ImageButton) findViewById(R.id.helpIconButton);
+        ImageButton exitPopupBtn = (ImageButton) findViewById(R.id.exitIconButton);
 
         helpPopupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(DifficultySelectionPage.this, HelpPopup.class);
+                startActivity(intent);
+            }
+        });
+
+        exitPopupBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DifficultySelectionPage.this, ExitPopup.class);
                 startActivity(intent);
             }
         });
