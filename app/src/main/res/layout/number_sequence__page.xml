@@ -38,8 +38,8 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="331dp"
-        android:layout_height="144dp"
+        android:layout_width="332dp"
+        android:layout_height="118dp"
         android:text="Memorize The\nSequence"
         android:textAlignment="center"
         android:textSize="38sp"
@@ -50,10 +50,10 @@
         app:layout_constraintTop_toBottomOf="@+id/helpIconButton"
         app:layout_constraintVertical_bias="0.141" />
 
-    <EditText
+    <TextView
         android:id="@+id/editTextNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="198dp"
+        android:layout_height="41dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
