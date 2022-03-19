@@ -40,7 +40,7 @@
         android:layout_height="135dp"
         android:text="Guess The\nSequence"
         android:textAlignment="center"
-        android:textSize="42sp"
+        android:textSize="44sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,13 +50,13 @@
 
     <EditText
         android:id="@+id/editTextNumber7"
-        android:layout_width="236dp"
-        android:layout_height="53dp"
+        android:layout_width="322dp"
+        android:layout_height="49dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9"
         app:layout_constraintVertical_bias="0.114" />
@@ -67,13 +67,13 @@
         android:layout_height="26dp"
         android:text="Current Score:"
         android:textAlignment="center"
-        android:textSize="16sp"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.388"
+        app:layout_constraintHorizontal_bias="0.356"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber7"
-        app:layout_constraintVertical_bias="0.146" />
+        app:layout_constraintVertical_bias="0.208" />
 
     <EditText
         android:id="@+id/editTextNumber10"
@@ -86,10 +86,10 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView12"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber7"
-        app:layout_constraintVertical_bias="0.13" />
+        app:layout_constraintVertical_bias="0.215" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/checkButton"
         android:layout_width="171dp"
         android:layout_height="60dp"
         android:rotationX="2"
