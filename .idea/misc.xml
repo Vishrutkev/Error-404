@@ -24,20 +24,24 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.244" />
         <entry key="app/src/main/res/layout-land/correct_input_score_page.xml" value="0.25625" />
         <entry key="app/src/main/res/layout-land/difficulty_selection_page.xml" value="0.178125" />
-        <entry key="app/src/main/res/layout-land/incorrect_input_score_page.xml" value="0.178125" />
+        <entry key="app/src/main/res/layout-land/incorrect_input_score_page.xml" value="0.24277954101562502" />
         <entry key="app/src/main/res/layout-land/main_page1.xml" value="0.1" />
         <entry key="app/src/main/res/layout-land/main_page2.xml" value="0.33724822998046877" />
         <entry key="app/src/main/res/layout-land/number_sequence_page.xml" value="0.13125" />
+        <entry key="app/src/main/res/layout-land/user_sequence_input_page.xml" value="0.2869791666666667" />
         <entry key="app/src/main/res/layout/correct_input_score_page.xml" value="0.2171875" />
+        <entry key="app/src/main/res/layout/correct_inputt_score_page.xml" value="0.25" />
         <entry key="app/src/main/res/layout/difficulty_selection_page.xml" value="0.1" />
         <entry key="app/src/main/res/layout/dificulty_selection_page.xml" value="0.25" />
         <entry key="app/src/main/res/layout/incorrect_input_score_page.xml" value="0.2171875" />
+        <entry key="app/src/main/res/layout/incorrect_inputt_score_page.xml" value="0.23140716552734378" />
         <entry key="app/src/main/res/layout/main_page1.xml" value="0.165" />
         <entry key="app/src/main/res/layout/main_page2.xml" value="0.2171875" />
-        <entry key="app/src/main/res/layout/main_pagee2.xml" value="0.2708333333333333" />
+        <entry key="app/src/main/res/layout/main_pagee2.xml" value="0.14823913574218753" />
         <entry key="app/src/main/res/layout/number_sequence__page.xml" value="0.28489583333333335" />
         <entry key="app/src/main/res/layout/number_sequence_page.xml" value="0.2171875" />
         <entry key="app/src/main/res/layout/user_sequence_input_page.xml" value="0.2171875" />
+        <entry key="app/src/main/res/layout/user_sequence_inputt_page.xml" value="0.375" />
       </map>
     </option>
   </component>
