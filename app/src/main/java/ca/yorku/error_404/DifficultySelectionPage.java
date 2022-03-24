@@ -81,5 +81,4 @@ public class DifficultySelectionPage extends AppCompatActivity {
         Intent intent = new Intent(this, Number_Sequence_Page.class);
         startActivity(intent);
     }
-
 }
