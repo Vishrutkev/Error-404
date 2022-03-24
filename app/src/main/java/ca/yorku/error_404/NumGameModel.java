@@ -34,7 +34,7 @@ public class NumGameModel {
     }
 
     /**
-     * Method to redirect user to user_sequence_input_page.xml
+     * Method to redirect user to user_sequence_inputt_page.xml
      *
      * @return None
      */
