@@ -19,6 +19,14 @@
             android:name=".DifficultySelectionPage"
             android:exported="false" />
         <activity
+            android:name=".HelpPopup"
+            android:theme="@style/Theme.Error404.CustomTheme"
+            android:exported="false" />
+        <activity
+            android:name=".ExitPopup"
+            android:theme="@style/Theme.Error404.CustomTheme"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
