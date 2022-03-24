@@ -15,7 +15,7 @@ public class NumGameModel {
      */
     private int difficulty = 0;
     private int[] randNumList = {};
-    private int highScore = 0;
+    private static int highScore = 0;
     private int latestScore = 0;
     private boolean isCorrect;
 
@@ -201,6 +201,15 @@ public class NumGameModel {
         } else if (isCorrect && difficulty == 3) {
             latestScore += 3;
         }
+    }
+
+    /**
+     * Method to return user's high score
+     *
+     * @return int
+     */
+    public static int getHighScore() {
+        return highScore;
     }
 
 
