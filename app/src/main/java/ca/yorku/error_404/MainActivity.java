@@ -29,4 +29,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, DifficultySelectionPage.class);
         startActivity(intent);
     }
+
+
 }
