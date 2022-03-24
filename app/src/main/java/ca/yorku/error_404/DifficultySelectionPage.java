@@ -1,6 +1,7 @@
 package ca.yorku.error_404;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,13 +13,13 @@ public class DifficultySelectionPage extends AppCompatActivity {
     private Button easybutton;
     private Button mediumbutton;
     private Button hardbutton;
-
     private long mLastClickTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dificulty_selection_page);
+
 
         easybutton = (Button) findViewById(R.id.easyButton);
         easybutton.setOnClickListener(new View.OnClickListener() {
