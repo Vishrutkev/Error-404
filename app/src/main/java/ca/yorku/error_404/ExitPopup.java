@@ -28,7 +28,6 @@ public class ExitPopup extends Activity {
         Button yesButton = findViewById(R.id.yesButton);
 
         //Fix: can click buttons multiple times, assign boolean click if unopened
-        //Fix: if latestScore == 0, intent to MainPage1 else MainPage2
 
         noButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,7 +39,13 @@ public class ExitPopup extends Activity {
         yesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ExitPopup.this, MainActivity.class);
+                // IMPLEMENT getLatestScore in NumModel.java
+                //if (NumGameModel.getLatestScore == 0) {
+                    Intent intent = new Intent(ExitPopup.this, MainActivity.class);
+                //}
+                //else {
+                //    Intent intent = new Intent(ExitPopup.this, MainPage2.class);
+                //}
                 startActivity(intent);
             }
         });

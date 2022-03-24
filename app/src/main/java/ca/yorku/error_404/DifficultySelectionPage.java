@@ -7,10 +7,13 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.View;
 import android.widget.ImageButton;
 
 public class DifficultySelectionPage extends AppCompatActivity {
+
+    private long mLastClickTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,11 @@ public class DifficultySelectionPage extends AppCompatActivity {
         helpPopupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
+
                 Intent intent = new Intent(DifficultySelectionPage.this, HelpPopup.class);
                 startActivity(intent);
             }
@@ -31,6 +39,11 @@ public class DifficultySelectionPage extends AppCompatActivity {
         exitPopupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
+
                 Intent intent = new Intent(DifficultySelectionPage.this, ExitPopup.class);
                 startActivity(intent);
             }
