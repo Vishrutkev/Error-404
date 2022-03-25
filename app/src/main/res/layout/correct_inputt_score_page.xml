@@ -4,78 +4,92 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Number_Sequence_Page"
-    android:background="#52B9E6">
+    android:background="#52B9E6"
+    tools:context=".Correct_input_Score_Page">
 
     <ImageButton
         android:id="@+id/helpIconButton"
-        android:layout_width="56dp"
-        android:layout_height="48dp"
+        android:layout_width="66dp"
+        android:layout_height="59dp"
         android:adjustViewBounds="true"
         android:background="@null"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/exitIconButton"
-        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintHorizontal_bias="0.027"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.026"
+        app:layout_constraintVertical_bias="0.022"
         app:srcCompat="@drawable/helpicon" />
 
     <ImageButton
         android:id="@+id/exitIconButton"
-        android:layout_width="48dp"
-        android:layout_height="49dp"
+        android:layout_width="60dp"
+        android:layout_height="65dp"
+        android:layout_marginEnd="16dp"
         android:adjustViewBounds="true"
         android:background="@null"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.932"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.026"
+        app:layout_constraintVertical_bias="0.023"
         app:srcCompat="@drawable/exiticon" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="332dp"
-        android:layout_height="118dp"
-        android:text="Memorize The\nSequence"
+        android:id="@+id/textView5"
+        android:layout_width="223dp"
+        android:layout_height="124dp"
+        android:text="Correct\nInput!"
         android:textAlignment="center"
-        android:textSize="40sp"
+        android:textColor="#403E3E"
+        android:textSize="46sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/helpIconButton"
-        app:layout_constraintVertical_bias="0.141" />
+        app:layout_constraintVertical_bias="0.073" />
 
     <TextView
-        android:id="@+id/editTextNumber"
-        android:layout_width="198dp"
-        android:layout_height="41dp"
-        android:ems="10"
-        android:inputType="number"
+        android:id="@+id/textView6"
+        android:layout_width="174dp"
+        android:layout_height="46dp"
+        android:text="Current Score:"
+        android:textAlignment="center"
+        android:textColor="#353131"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.153" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.112" />
+
+    <TextView
+        android:id="@+id/editTextNumber2"
+        android:layout_width="180dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/readyButton"
+        android:id="@+id/nextRoundbutton"
         android:layout_width="167dp"
         android:layout_height="55dp"
         android:rotationX="2"
-        android:text="Ready"
+        android:text="Next Round"
         android:backgroundTint="#504E4E"
         android:textSize="16sp"
-        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
-
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

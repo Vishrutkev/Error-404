@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#52B9E6"
     tools:context=".MainActivity">
 
     <TextView
@@ -21,14 +22,15 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.243" />
+        app:layout_constraintVertical_bias="0.215" />
 
     <Button
         android:id="@+id/playButton1"
-        android:layout_width="165dp"
+        android:layout_width="167dp"
         android:layout_height="55dp"
         android:rotationX="5"
         android:text="PLAY"
+        android:backgroundTint="#504E4E"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
