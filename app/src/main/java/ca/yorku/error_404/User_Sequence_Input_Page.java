@@ -9,20 +9,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class Number_Sequence_Page extends AppCompatActivity {
-    private Button readybutton;
+public class User_Sequence_Input_Page extends AppCompatActivity {
+    private Button checkbutton;
     private long mLastClickTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.number_sequence__page);
+        setContentView(R.layout.user_sequence_inputt_page);
 
-        readybutton = (Button) findViewById(R.id.readyButton);
-        readybutton.setOnClickListener(new View.OnClickListener() {
+        checkbutton = (Button) findViewById(R.id.checkButton);
+        checkbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openUser_Sequence_Input_Page();
+                openCorrect_input_Score_Page();
             }
         });
 
@@ -37,7 +37,7 @@ public class Number_Sequence_Page extends AppCompatActivity {
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
 
-                Intent intent = new Intent(Number_Sequence_Page.this, HelpPopup.class);
+                Intent intent = new Intent(User_Sequence_Input_Page.this, HelpPopup.class);
                 startActivity(intent);
             }
         });
@@ -50,17 +50,16 @@ public class Number_Sequence_Page extends AppCompatActivity {
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
 
-                Intent intent = new Intent(Number_Sequence_Page.this, ExitPopup.class);
+                Intent intent = new Intent(User_Sequence_Input_Page.this, ExitPopup.class);
                 startActivity(intent);
             }
         });
+
     }
 
-    private void openUser_Sequence_Input_Page() {
-        Intent intent = new Intent(this, User_Sequence_Input_Page.class);
+
+    public void openCorrect_input_Score_Page() {
+        Intent intent = new Intent(this, Correct_input_Score_Page.class);
         startActivity(intent);
-
     }
-
-
 }

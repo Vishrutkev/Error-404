@@ -6,25 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
-public class Number_Sequence_Page extends AppCompatActivity {
-    private Button readybutton;
+public class Incorrect_input_Score_Page extends AppCompatActivity {
     private long mLastClickTime = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.number_sequence__page);
-
-        readybutton = (Button) findViewById(R.id.readyButton);
-        readybutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openUser_Sequence_Input_Page();
-            }
-        });
+        setContentView(R.layout.incorrect_inputt_score_page);
 
         ImageButton helpPopupBtn = (ImageButton) findViewById(R.id.helpIconButton);
         ImageButton exitPopupBtn = (ImageButton) findViewById(R.id.exitIconButton);
@@ -37,7 +28,7 @@ public class Number_Sequence_Page extends AppCompatActivity {
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
 
-                Intent intent = new Intent(Number_Sequence_Page.this, HelpPopup.class);
+                Intent intent = new Intent(Incorrect_input_Score_Page.this, HelpPopup.class);
                 startActivity(intent);
             }
         });
@@ -50,15 +41,10 @@ public class Number_Sequence_Page extends AppCompatActivity {
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
 
-                Intent intent = new Intent(Number_Sequence_Page.this, ExitPopup.class);
+                Intent intent = new Intent(Incorrect_input_Score_Page.this, ExitPopup.class);
                 startActivity(intent);
             }
         });
-    }
-
-    private void openUser_Sequence_Input_Page() {
-        Intent intent = new Intent(this, User_Sequence_Input_Page.class);
-        startActivity(intent);
 
     }
 

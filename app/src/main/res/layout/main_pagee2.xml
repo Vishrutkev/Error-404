@@ -22,10 +22,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.062" />
 
-    <EditText
+    <TextView
         android:id="@+id/editTextNumber3"
-        android:layout_width="138dp"
-        android:layout_height="36dp"
+        android:layout_width="103dp"
+        android:layout_height="39dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
         android:inputType="number"
@@ -38,23 +38,23 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="301dp"
-        android:layout_height="200dp"
+        android:layout_width="283dp"
+        android:layout_height="169dp"
         android:text="Number\nMemorization\nGame"
         android:textAlignment="center"
-        android:textSize="48sp"
+        android:textSize="42sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.164" />
+        app:layout_constraintVertical_bias="0.106" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="52dp"
         android:text="Latest Score:"
         android:textColor="#0E0D0D"
         android:textSize="20sp"
@@ -62,31 +62,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <EditText
+    <TextView
         android:id="@+id/editTextNumber4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="198dp"
+        android:layout_height="45dp"
         android:ems="10"
         android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.069" />
+        app:layout_constraintVertical_bias="0.064" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="154dp"
+        android:id="@+id/playAgainbutton"
+        android:layout_width="167dp"
         android:layout_height="55dp"
-        android:rotationX="6"
         android:rotationY="2"
-        android:text="Play"
+        android:text="Play Again"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumber4"
-        app:layout_constraintVertical_bias="0.468" />
+        app:layout_constraintVertical_bias="0.524" />
 </androidx.constraintlayout.widget.ConstraintLayout>

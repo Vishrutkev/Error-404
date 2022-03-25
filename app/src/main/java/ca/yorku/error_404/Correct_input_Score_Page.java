@@ -9,20 +9,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class Number_Sequence_Page extends AppCompatActivity {
-    private Button readybutton;
+public class Correct_input_Score_Page extends AppCompatActivity {
+    private Button nextroundbutton;
     private long mLastClickTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.number_sequence__page);
+        setContentView(R.layout.correct_inputt_score_page);
 
-        readybutton = (Button) findViewById(R.id.readyButton);
-        readybutton.setOnClickListener(new View.OnClickListener() {
+        nextroundbutton = (Button) findViewById(R.id.nextRoundbutton);
+        nextroundbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openUser_Sequence_Input_Page();
+                openNumber_Sequence_Page();
             }
         });
 
@@ -37,7 +37,7 @@ public class Number_Sequence_Page extends AppCompatActivity {
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
 
-                Intent intent = new Intent(Number_Sequence_Page.this, HelpPopup.class);
+                Intent intent = new Intent(Correct_input_Score_Page.this, HelpPopup.class);
                 startActivity(intent);
             }
         });
@@ -50,17 +50,16 @@ public class Number_Sequence_Page extends AppCompatActivity {
                 }
                 mLastClickTime = SystemClock.elapsedRealtime();
 
-                Intent intent = new Intent(Number_Sequence_Page.this, ExitPopup.class);
+                Intent intent = new Intent(Correct_input_Score_Page.this, ExitPopup.class);
                 startActivity(intent);
             }
         });
+
     }
 
-    private void openUser_Sequence_Input_Page() {
-        Intent intent = new Intent(this, User_Sequence_Input_Page.class);
+
+    public void openNumber_Sequence_Page() {
+        Intent intent = new Intent(this, Number_Sequence_Page.class);
         startActivity(intent);
-
     }
-
-
 }
