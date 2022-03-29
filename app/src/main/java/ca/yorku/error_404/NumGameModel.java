@@ -129,5 +129,12 @@ public class NumGameModel {
         return highScore;
     }
 
-
+    /**
+     * Helper Method to return the random number sequence
+     *
+     * @return int[]
+     */
+    public static int[] getNumList() {
+        return randNumList;
+    }
 }
