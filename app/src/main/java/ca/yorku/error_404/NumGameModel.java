@@ -13,13 +13,13 @@ public class NumGameModel {
      * @param difficulty int type for difficulty level user selected
      * @return int from 1-9
      */
-    private int difficulty = 0;
-    private int[] randNumList = {};
+    private static int difficulty = 0;
+    private static int[] randNumList = {};
     private static int highScore = 0;
-    private int latestScore = 0;
-    private boolean isCorrect;
+    private static int latestScore = 0;
+    private static boolean isCorrect;
 
-    public int[] generateRandomNumber(int difficulty) {
+    public static int[] generateRandomNumber(int difficulty) {
         Random rnd = new Random();
         for (int i = 0; i < difficulty; i++) {
             int randNum = rnd.nextInt(9) + 1;
@@ -27,38 +27,6 @@ public class NumGameModel {
             randNumList[randNumList.length - 1] = randNum;
         }
         return randNumList;
-    }
-
-    public void PlayButton(){
-        throw new UnsupportedOperationException();
-    }
-
-    /**
-     * Method to redirect user to user_sequence_inputt_page.xml
-     * @return None
-     */
-    public void readyButton() {
-        throw new UnsupportedOperationException();
-    }
-
-    /**
-     * Method to display help icon page popup and call
-     * helpPopupExit() when clicked on exit icon
-     *
-     * @return None
-     */
-    public void helpButton() {
-        throw new UnsupportedOperationException();
-    }
-
-    /**
-     * Method to exit help icon page popup and return
-     * to current page user is on
-     *
-     * @return None
-     */
-    public void helpPopupExit() {
-        throw new UnsupportedOperationException();
     }
 
     /**
@@ -83,16 +51,6 @@ public class NumGameModel {
     }
 
     /**
-     * Method to display correct number sequence and incorrect sequence
-     *
-     * @return None
-     */
-    public void displayCorrectIncorrectSequence() {
-        throw new UnsupportedOperationException();
-    }
-
-
-    /**
      * Convert number sequence and user input to string
      * Check for correct input and make isCorrect equal true
      * Method to call updateLatestScore() and addToSequence() and redirect
@@ -113,46 +71,6 @@ public class NumGameModel {
             generateRandomNumber(difficulty);
             updateLatestScore();
         }
-    }
-
-    /**
-     * Method to display return to main page popup
-     *
-     * @return None
-     */
-    public void homeButton() {
-        throw new UnsupportedOperationException();
-    }
-
-    /**
-     * Method to exit main page popup and display yes
-     * button to call homePopupYes() and exit, and no
-     * button to call homePopupNo() and close popup
-     *
-     * @return None
-     */
-    public void homePopup() {
-        throw new UnsupportedOperationException();
-    }
-
-    /**
-     * Method to exit current page and return to
-     * main_page1 if high score equals 0, otherwise
-     * return to main_page2
-     *
-     * @return None
-     */
-    public void homePopupYes() {
-        throw new UnsupportedOperationException();
-    }
-
-    /**
-     * Method to close return to main page popup
-     *
-     * @return None
-     */
-    public void homePopupNo() {
-        throw new UnsupportedOperationException();
     }
 
     /**
