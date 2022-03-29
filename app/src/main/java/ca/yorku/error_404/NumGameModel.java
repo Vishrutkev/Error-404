@@ -13,13 +13,13 @@ public class NumGameModel {
      * @param difficulty int type for difficulty level user selected
      * @return int from 1-9
      */
-    private int difficulty = 0;
-    private int[] randNumList = {};
+    private static int difficulty = 0;
+    private static int[] randNumList = {};
     private static int highScore = 0;
-    private int latestScore = 0;
-    private boolean isCorrect;
+    private static int latestScore = 0;
+    private static boolean isCorrect;
 
-    public int[] generateRandomNumber(int difficulty) {
+    public static int[] generateRandomNumber(int difficulty) {
         Random rnd = new Random();
         for (int i = 0; i < difficulty; i++) {
             int randNum = rnd.nextInt(9) + 1;
