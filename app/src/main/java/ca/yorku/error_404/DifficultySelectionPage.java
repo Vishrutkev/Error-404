@@ -7,7 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.os.SystemClock;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
+import java.util.Arrays;
 
 public class DifficultySelectionPage extends AppCompatActivity {
     private Button easybutton;
@@ -25,7 +29,12 @@ public class DifficultySelectionPage extends AppCompatActivity {
         easybutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openNumber_Sequence_Page();
+                int[] easyNum = NumGameModel.generateRandomNumber(1);
+                String eS = Arrays.toString(easyNum);
+                Intent i = new Intent(DifficultySelectionPage.this, Number_Sequence_Page.class);
+                i.putExtra("value", eS);
+                startActivity(i);
+                finish();
             }
         });
 
@@ -33,7 +42,12 @@ public class DifficultySelectionPage extends AppCompatActivity {
         mediumbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openNumber_Sequence_Page();
+                int[] mediumNum = NumGameModel.generateRandomNumber(2);
+                String mS = Arrays.toString(mediumNum);
+                Intent i1 = new Intent(DifficultySelectionPage.this, Number_Sequence_Page.class);
+                i1.putExtra("value", mS);
+                startActivity(i1);
+                finish();
             }
         });
 
@@ -41,7 +55,12 @@ public class DifficultySelectionPage extends AppCompatActivity {
         hardbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openNumber_Sequence_Page();
+                int[] hardNum = NumGameModel.generateRandomNumber(3);
+                String hS = Arrays.toString(hardNum);
+                Intent i2 = new Intent(DifficultySelectionPage.this, Number_Sequence_Page.class);
+                i2.putExtra("value", hS);
+                startActivity(i2);
+                finish();
             }
         });
 
@@ -76,10 +95,5 @@ public class DifficultySelectionPage extends AppCompatActivity {
 
     }
 
-
-    public void openNumber_Sequence_Page() {
-        Intent intent = new Intent(this, Number_Sequence_Page.class);
-        startActivity(intent);
-    }
-
 }
+

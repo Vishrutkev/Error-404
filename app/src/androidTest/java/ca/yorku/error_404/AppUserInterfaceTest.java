@@ -1,9 +1,5 @@
 package ca.yorku.error_404;
 
-import android.text.style.EasyEditSpan;
-import android.util.DisplayMetrics;
-import android.view.View;
-
 import androidx.test.core.app.ActivityScenario;
 import androidx.test.espresso.Espresso;
 import androidx.test.espresso.matcher.ViewMatchers;
@@ -100,7 +96,7 @@ public class AppUserInterfaceTest {
         Thread.sleep(2000);
         Espresso.onView(ViewMatchers.withId(R.id.readyButton)).perform(ViewActions.click());
         Thread.sleep(2000);
-        Espresso.onView(ViewMatchers.withId(R.id.editTextNumber)).perform(ViewActions.typeText(Integer.toString(NumGameModel.getNumList()[0])));
+        Espresso.onView(ViewMatchers.withId(R.id.genSeq)).perform(ViewActions.typeText(Integer.toString(NumGameModel.getNumList()[0])));
         Thread.sleep(2000);
         Espresso.onView(ViewMatchers.withId(R.id.checkButton)).perform(ViewActions.click());
         Thread.sleep(2000);
@@ -125,7 +121,7 @@ public class AppUserInterfaceTest {
         num = num + 11;
         String incorrectNum = Integer.toString(num).substring(1);
 
-        Espresso.onView(ViewMatchers.withId(R.id.editTextNumber)).perform(ViewActions.typeText(incorrectNum));
+        Espresso.onView(ViewMatchers.withId(R.id.genSeq)).perform(ViewActions.typeText(incorrectNum));
         Thread.sleep(2000);
         Espresso.onView(ViewMatchers.withId(R.id.checkButton)).perform(ViewActions.click());
         Thread.sleep(2000);
