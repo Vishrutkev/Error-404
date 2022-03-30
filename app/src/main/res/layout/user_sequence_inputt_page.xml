@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".User_Sequence_Input_Page">
+    tools:context=".User_Sequence_Input_Page"
+    android:background="#52B9E6">
 
     <ImageButton
         android:id="@+id/exitIconButton"
@@ -95,6 +96,7 @@
         android:rotationX="2"
         android:rotationY="1"
         android:text="Check"
+        android:backgroundTint="#504E4E"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
