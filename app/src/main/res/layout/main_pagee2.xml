@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainPage2">
+    tools:context=".MainPage2"
+    android:background="#52B9E6">
 
     <TextView
         android:id="@+id/textView2"
@@ -81,6 +82,7 @@
         android:layout_height="55dp"
         android:rotationY="2"
         android:text="Play Again"
+        android:backgroundTint="#504E4E"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

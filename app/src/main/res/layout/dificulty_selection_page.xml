@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#52B9E6"
     tools:context=".MainActivity">
 
     <ImageButton
@@ -59,6 +60,7 @@
         android:rotationX="8"
         android:text="Medium"
         android:textSize="17sp"
+        android:backgroundTint="#504E4E"
         app:layout_constraintBottom_toTopOf="@+id/hardButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,6 +73,7 @@
         android:layout_height="55dp"
         android:rotationX="10"
         android:text="Easy"
+        android:backgroundTint="#504E4E"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/mediumButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,6 +86,7 @@
         android:layout_height="59dp"
         android:rotationX="6"
         android:text="Hard"
+        android:backgroundTint="#504E4E"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

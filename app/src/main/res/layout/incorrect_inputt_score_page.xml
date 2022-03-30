@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#52B9E6"
     tools:context=".Incorrect_input_Score_Page">
 
     <ImageButton
@@ -54,7 +55,7 @@
         android:layout_height="29dp"
         android:text="Sequence"
         android:textAlignment="center"
-        android:textSize="18sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -107,6 +108,7 @@
         android:layout_height="55dp"
         android:text="Return To\nMain Page"
         android:textSize="16sp"
+        android:backgroundTint="#504E4E"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
