@@ -55,35 +55,6 @@ public class Correct_input_Score_Page extends AppCompatActivity {
             }
         });
 
-        ImageButton helpPopupBtn = (ImageButton) findViewById(R.id.helpIconButton);
-        ImageButton exitPopupBtn = (ImageButton) findViewById(R.id.exitIconButton);
-
-        helpPopupBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
-                    return;
-                }
-                mLastClickTime = SystemClock.elapsedRealtime();
-
-                Intent intent = new Intent(Correct_input_Score_Page.this, HelpPopup.class);
-                startActivity(intent);
-            }
-        });
-
-        exitPopupBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
-                    return;
-                }
-                mLastClickTime = SystemClock.elapsedRealtime();
-
-                Intent intent = new Intent(Correct_input_Score_Page.this, ExitPopup.class);
-                startActivity(intent);
-            }
-        });
-
     }
 
 
