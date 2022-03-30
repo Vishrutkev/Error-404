@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class User_Sequence_Input_Page extends AppCompatActivity {
     private Button checkbutton;
+    private long mLastClickTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +23,35 @@ public class User_Sequence_Input_Page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openCorrect_input_Score_Page();
+            }
+        });
+
+        ImageButton helpPopupBtn = (ImageButton) findViewById(R.id.helpIconButton);
+        ImageButton exitPopupBtn = (ImageButton) findViewById(R.id.exitIconButton);
+
+        helpPopupBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
+
+                Intent intent = new Intent(User_Sequence_Input_Page.this, HelpPopup.class);
+                startActivity(intent);
+            }
+        });
+
+        exitPopupBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
+                    return;
+                }
+                mLastClickTime = SystemClock.elapsedRealtime();
+
+                Intent intent = new Intent(User_Sequence_Input_Page.this, ExitPopup.class);
+                startActivity(intent);
             }
         });
 
