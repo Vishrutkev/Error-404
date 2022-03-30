@@ -29,42 +29,6 @@ public class NumGameModel {
         return randNumList;
     }
 
-<<<<<<<<< Temporary merge branch 1
-    public void PlayButton() {
-        throw new UnsupportedOperationException();
-    }
-
-    /**
-     * Method to redirect user to user_sequence_inputt_page.xml
-     *
-     * @return None
-     */
-    public void readyButton() {
-        throw new UnsupportedOperationException();
-    }
-
-    /**
-     * Method to display help icon page popup and call
-     * helpPopupExit() when clicked on exit icon
-     *
-     * @return None
-     */
-    public void helpButton() {
-        throw new UnsupportedOperationException();
-    }
-
-    /**
-     * Method to exit help icon page popup and return
-     * to current page user is on
-     *
-     * @return None
-     */
-    public void helpPopupExit() {
-        throw new UnsupportedOperationException();
-    }
-
-=========
->>>>>>>>> Temporary merge branch 2
     /**
      * Convert number sequence and user input to string
      * Check for incorrect input and make latestScore equal to zero if input is incorrect
