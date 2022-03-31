@@ -64,7 +64,7 @@
         app:layout_constraintVertical_bias="0.096" />
 
     <TextView
-        android:id="@+id/editTextNumber5"
+        android:id="@+id/numSeqView"
         android:layout_width="188dp"
         android:layout_height="42dp"
         android:ems="10"
@@ -86,11 +86,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber5"
+        app:layout_constraintTop_toBottomOf="@+id/numSeqView"
         app:layout_constraintVertical_bias="0.157" />
 
     <TextView
-        android:id="@+id/editTextNumber6"
+        android:id="@+id/userGuessView"
         android:layout_width="188dp"
         android:layout_height="42dp"
         android:ems="10"
@@ -112,7 +112,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber6"
+        app:layout_constraintTop_toBottomOf="@+id/userGuessView"
         app:layout_constraintVertical_bias="0.538" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
