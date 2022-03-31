@@ -7,23 +7,44 @@ import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class User_Sequence_Input_Page extends AppCompatActivity {
     private Button checkbutton;
     private long mLastClickTime = 0;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_sequence_inputt_page);
+        EditText userGuess = (EditText) findViewById(R.id.userGuess);
+        TextView currentScore = findViewById(R.id.currentScoreView);
+
+        currentScore.setText("" + NumGameModel.getLatestScore());
 
         checkbutton = (Button) findViewById(R.id.checkButton);
         checkbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openCorrect_input_Score_Page();
+                String userGuessStr = userGuess.getText().toString();
+                NumGameModel.setUserGuess(userGuessStr);
+
+                Boolean isGuessCorrect = NumGameModel.isEquals(userGuessStr);
+                if (isGuessCorrect) {
+                    Intent intent1 = new Intent(User_Sequence_Input_Page.this, Correct_input_Score_Page.class);
+                    startActivity(intent1);
+                } else {
+                    Intent intent2 = new Intent(User_Sequence_Input_Page.this, Incorrect_input_Score_Page.class);
+                    startActivity(intent2);
+//                }
+
+                }
             }
+
         });
 
         ImageButton helpPopupBtn = (ImageButton) findViewById(R.id.helpIconButton);
@@ -58,8 +79,5 @@ public class User_Sequence_Input_Page extends AppCompatActivity {
     }
 
 
-    public void openCorrect_input_Score_Page() {
-        Intent intent = new Intent(this, Correct_input_Score_Page.class);
-        startActivity(intent);
-    }
+
 }
