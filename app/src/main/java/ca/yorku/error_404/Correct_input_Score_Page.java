@@ -8,6 +8,7 @@ import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class Correct_input_Score_Page extends AppCompatActivity {
     private Button nextroundbutton;
@@ -17,6 +18,9 @@ public class Correct_input_Score_Page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.correct_inputt_score_page);
+
+        TextView currentScore = findViewById(R.id.currentScore2View);
+        currentScore.setText("" + NumGameModel.getLatestScore());
 
         nextroundbutton = (Button) findViewById(R.id.nextRoundbutton);
         nextroundbutton.setOnClickListener(new View.OnClickListener() {
@@ -39,12 +43,14 @@ public class Correct_input_Score_Page extends AppCompatActivity {
 
                 Intent intent = new Intent(Correct_input_Score_Page.this, HelpPopup.class);
                 startActivity(intent);
+                finish();
             }
         });
 
         exitPopupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //ADD METHOD TO RESET DATA
                 if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
                     return;
                 }
@@ -52,6 +58,7 @@ public class Correct_input_Score_Page extends AppCompatActivity {
 
                 Intent intent = new Intent(Correct_input_Score_Page.this, ExitPopup.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -60,6 +67,7 @@ public class Correct_input_Score_Page extends AppCompatActivity {
 
     public void openNumber_Sequence_Page() {
         Intent intent = new Intent(this, Number_Sequence_Page.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         startActivity(intent);
     }
 }

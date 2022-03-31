@@ -67,11 +67,12 @@
         app:layout_constraintVertical_bias="0.112" />
 
     <TextView
-        android:id="@+id/editTextNumber2"
+        android:id="@+id/currentScore2View"
         android:layout_width="180dp"
         android:layout_height="39dp"
         android:ems="10"
         android:inputType="number"
+        android:textAlignment="center"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,5 +92,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
+        app:layout_constraintTop_toBottomOf="@+id/currentScore2View" />
 </androidx.constraintlayout.widget.ConstraintLayout>
