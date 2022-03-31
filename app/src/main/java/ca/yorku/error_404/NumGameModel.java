@@ -35,7 +35,7 @@ public class NumGameModel {
      *
      * @return None
      */
-    public void incorrectInput(int userInput) {
+    public static void incorrectInput(int userInput) {
         String randNumStr = "";
         String userInputStr = "";
 
@@ -58,7 +58,7 @@ public class NumGameModel {
      *
      * @return None
      */
-    public void correctInput(int userInput) {
+    public static void correctInput(int userInput) {
         String randNumStr = "";
         String userInputStr = "";
 
@@ -81,7 +81,7 @@ public class NumGameModel {
      *
      * @return int
      */
-    public int selectDifficulty(int userselection) {
+    public static int selectDifficulty(int userselection) {
         if (userselection == 1) {
             difficulty = 1;
         } else if (userselection == 2) {
@@ -98,7 +98,7 @@ public class NumGameModel {
      *
      * @return None
      */
-    public void updateHighScore(int latestScore) {
+    public static void updateHighScore(int latestScore) {
         if (highScore < latestScore) {
             highScore = latestScore;
         }
@@ -110,7 +110,7 @@ public class NumGameModel {
      *
      * @return None
      */
-    public void updateLatestScore() {
+    public static void updateLatestScore() {
         if (isCorrect && difficulty == 1) {
             latestScore += 1;
         } else if (isCorrect && difficulty == 2) {
@@ -127,6 +127,14 @@ public class NumGameModel {
      */
     public static int getHighScore() {
         return highScore;
+    }
+
+    public static int getLatestScore() {
+        return latestScore;
+    }
+
+    public static boolean getIsCorrect() {
+        return isCorrect;
     }
 
     /**
