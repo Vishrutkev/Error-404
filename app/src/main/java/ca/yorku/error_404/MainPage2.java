@@ -33,6 +33,7 @@ public class MainPage2 extends AppCompatActivity {
     }
 
     public void openDifficultySelectionpage() {
+        NumGameModel.resetGame();
         Intent intent = new Intent(this, DifficultySelectionPage.class);
         startActivity(intent);
 

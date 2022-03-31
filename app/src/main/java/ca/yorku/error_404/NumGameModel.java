@@ -43,7 +43,6 @@ public class NumGameModel {
      */
     public static void incorrectInput() {
             isCorrect = false;
-            latestScore = 0;
     }
 
     /**
@@ -200,6 +199,12 @@ public class NumGameModel {
         return arrayStr;
     }
 
+    /**
+     * Helper method to update generated sequence text size
+     * when text goes off screen
+     *
+     * @return int[]
+     */
     public static int[] updateSizes() {
         textSizes[0] += 1;
         if (count < 7) {
@@ -211,8 +216,25 @@ public class NumGameModel {
         count++;
         return textSizes;
     }
+
+    /**
+     * Helper method to know when to call updateSizes()
+     *
+     * @return int[]
+     */
     public static int[] getTextSizes() {
         return textSizes;
+    }
+
+    /**
+     * Helper method to reset score
+     *
+     * @return none
+     */
+    public static void resetGame() {
+        int[] tempArr = {};
+        randNumList = tempArr;
+        latestScore = 0;
     }
 
 }
