@@ -19,6 +19,10 @@ public class NumGameModel {
     private static int latestScore = 0;
     private static boolean isCorrect;
     private static String userGuess = "";
+    private static int maxLength = 9;
+    private static int textSize = 36;
+    private static int[] textSizes = {maxLength, textSize};
+    private static int count = 0;
 
     public static int[] generateRandomNumber(int difficulty) {
         Random rnd = new Random();
@@ -197,12 +201,34 @@ public class NumGameModel {
      */
     public static String getUserGuess() {return userGuess.trim().replace(" ", "");}
 
+    /**
+     * Helper Method remove brackets, commas, and spaces
+     * in array when converting it to string
+     *
+     * @return int
+     */
     public static String formatArr(String arrayStr) {
         arrayStr = arrayStr.replace(",", "")
                 .replace("[", "")
                 .replace("]", "")
+                .replace(" ", "")
                 .trim();
         return arrayStr;
+    }
+
+    public static int[] updateSizes() {
+        textSizes[0] += 1;
+        if (count < 7) {
+            textSizes[1] = (int)(textSizes[1] * 0.8);
+        }
+        else {
+            textSizes[1] = (int)(textSizes[1] * 0.9);
+        }
+        count++;
+        return textSizes;
+    }
+    public static int[] getTextSizes() {
+        return textSizes;
     }
 
 }
