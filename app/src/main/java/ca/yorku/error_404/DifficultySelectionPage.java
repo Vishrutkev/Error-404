@@ -29,7 +29,7 @@ public class DifficultySelectionPage extends AppCompatActivity {
         easybutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int[] easyNum = NumGameModel.generateRandomNumber(1);
+                int[] easyNum = NumGameModel.selectDifficulty(1);
                 String eS = Arrays.toString(easyNum);
                 Intent i = new Intent(DifficultySelectionPage.this, Number_Sequence_Page.class);
                 i.putExtra("value", eS);
@@ -42,7 +42,7 @@ public class DifficultySelectionPage extends AppCompatActivity {
         mediumbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int[] mediumNum = NumGameModel.generateRandomNumber(2);
+                int[] mediumNum = NumGameModel.selectDifficulty(2);
                 String mS = Arrays.toString(mediumNum);
                 Intent i1 = new Intent(DifficultySelectionPage.this, Number_Sequence_Page.class);
                 i1.putExtra("value", mS);
@@ -55,7 +55,7 @@ public class DifficultySelectionPage extends AppCompatActivity {
         hardbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int[] hardNum = NumGameModel.generateRandomNumber(3);
+                int[] hardNum = NumGameModel.selectDifficulty(3);
                 String hS = Arrays.toString(hardNum);
                 Intent i2 = new Intent(DifficultySelectionPage.this, Number_Sequence_Page.class);
                 i2.putExtra("value", hS);
