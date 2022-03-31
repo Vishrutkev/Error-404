@@ -39,12 +39,14 @@ public class Correct_input_Score_Page extends AppCompatActivity {
 
                 Intent intent = new Intent(Correct_input_Score_Page.this, HelpPopup.class);
                 startActivity(intent);
+                finish();
             }
         });
 
         exitPopupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //ADD METHOD TO RESET DATA
                 if (SystemClock.elapsedRealtime() - mLastClickTime < 1000){
                     return;
                 }
@@ -52,6 +54,7 @@ public class Correct_input_Score_Page extends AppCompatActivity {
 
                 Intent intent = new Intent(Correct_input_Score_Page.this, ExitPopup.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -60,6 +63,7 @@ public class Correct_input_Score_Page extends AppCompatActivity {
 
     public void openNumber_Sequence_Page() {
         Intent intent = new Intent(this, Number_Sequence_Page.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         startActivity(intent);
     }
 }

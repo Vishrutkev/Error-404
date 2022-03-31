@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import java.util.Arrays;
+
 public class Number_Sequence_Page extends AppCompatActivity {
     private Button readybutton;
     private long mLastClickTime = 0;
@@ -23,8 +25,8 @@ public class Number_Sequence_Page extends AppCompatActivity {
         setContentView(R.layout.number_sequence__page);
         genSe = findViewById(R.id.genSeq);
 
-        st = getIntent().getExtras().getString("value");
-        genSe.setText(st);
+//        st = getIntent().getExtras().getString("value");
+        genSe.setText(Arrays.toString(NumGameModel.getNumList()));
 
 
         readybutton = (Button) findViewById(R.id.readyButton);
@@ -32,9 +34,8 @@ public class Number_Sequence_Page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Number_Sequence_Page.this, User_Sequence_Input_Page.class);
-                intent.putExtra("value1", genSe.getText());
                 startActivity(intent);
-
+                finish();
             }
         });
 
@@ -51,6 +52,7 @@ public class Number_Sequence_Page extends AppCompatActivity {
 
                 Intent intent = new Intent(Number_Sequence_Page.this, HelpPopup.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -63,7 +65,8 @@ public class Number_Sequence_Page extends AppCompatActivity {
                 mLastClickTime = SystemClock.elapsedRealtime();
 
                 Intent intent = new Intent(Number_Sequence_Page.this, ExitPopup.class);
-
+                startActivity(intent);
+                finish();
             }
         });
     }

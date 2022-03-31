@@ -116,15 +116,16 @@ public class NumGameModel {
      *
      * @return int
      */
-    public int selectDifficulty(int userselection) {
+    public static int[] selectDifficulty(int userselection) {
         if (userselection == 1) {
             difficulty = 1;
+
         } else if (userselection == 2) {
             difficulty = 2;
         } else {
             difficulty = 3;
         }
-        return difficulty;
+        return generateRandomNumber(difficulty);
     }
 
     /**
@@ -172,4 +173,14 @@ public class NumGameModel {
     public static int[] getNumList() {
         return randNumList;
     }
+
+    /**
+     * Helper Method to return difficulty level
+     *
+     * @return int
+     */
+    public static int getDifficulty() {
+        return difficulty;
+    }
+
 }
