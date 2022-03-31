@@ -1,94 +1,88 @@
 package ca.yorku.error_404;
 
+import java.util.Arrays;
+import java.util.Random;
+
 public class NumGameModel {
 
     /**
      * Method to to generate a random double value
+     * For loop to generate 1,2 or 3 random numbers depending on the users difficulty selection
+     * Adds generated random nunmber to the end of the memorization sequence
+     *
      * @param difficulty int type for difficulty level user selected
-     * @return int
+     * @return int from 1-9
      */
-    public static int generateRandomNumber(int difficulty) {
-        throw new UnsupportedOperationException();
+    private static int difficulty = 0;
+    private static int[] randNumList = {};
+    private static int highScore = 0;
+    private static int latestScore = 0;
+    private static boolean isCorrect;
+    private static String userGuess = "";
+    private static int maxLength = 9;
+    private static int textSize = 36;
+    private static int[] textSizes = {maxLength, textSize};
+    private static int count = 0;
+
+    public static int[] generateRandomNumber(int difficulty) {
+        Random rnd = new Random();
+        for (int i = 0; i < difficulty; i++) {
+            int randNum = rnd.nextInt(9) + 1;
+            randNumList = Arrays.copyOf(randNumList, randNumList.length + 1);
+            randNumList[randNumList.length - 1] = randNum;
+        }
+        return randNumList;
     }
 
+
     /**
-     * Method to redirect user to user_sequence_input_page.xml
+     * Method to check for incorrect input and make latestScore equal
+     * to zero if input is incorrect
+     *
      * @return None
      */
-    public void readyButton() {
-        throw new UnsupportedOperationException();
+    public static void incorrectInput() {
+            isCorrect = false;
     }
 
     /**
-     * Method to display help icon page popup and call
-     * helpPopupExit() when clicked on exit icon
+     * Method to call updateLatestScore() and generateRandomNumber() udpate
+     * latest score and redirect user to user_sequence_page.xml with a
+     * new sequence to input
+     * guess
+     *
      * @return None
      */
-    public void helpButton() {
-        throw new UnsupportedOperationException();
+    public static void correctInput() {
+        isCorrect = true;
+        generateRandomNumber(difficulty);
+        updateLatestScore();
+        updateHighScore();
     }
 
     /**
-     * Method to exit help icon page popup and return
-     * to current page user is on
-     * @return None
-     */
-    public void helpPopupExit() {
-        throw new UnsupportedOperationException();
-    }
-
-    /**
-     * Method to display correct number sequence and incorrect sequence
-     * user inputted and call updateHighScore() and updateLatestScore()
-     * @return None
-     */
-    public void incorrectInput() {
-        throw new UnsupportedOperationException();
-    }
-
-    /**
-     * Method to call updateLatestScore() and addToSequence() and redirect
+     * Convert number sequence and user input to string
+     * Check for correct input and make isCorrect equal true
+     * Method to call correctInput() and redirect
      * user to user_sequence_page.xml with a new sequence to input guess
+     *
      * @return None
      */
-    public void correctInput() {
-        throw new UnsupportedOperationException();
-    }
+    public static Boolean isEquals(String userInput) {
+        String randNumStr = "";
 
-    /**
-     * Method to display return to main page popup
-     * @return None
-     */
-    public void homeButton() {
-        throw new UnsupportedOperationException();
-    }
+        for (int i = 0; i < randNumList.length; i++) {
+            randNumStr += randNumList[i];
+        }
 
-    /**
-     * Method to exit main page popup and display yes
-     * button to call homePopupYes() and exit, and no
-     * button to call homePopupNo() and close popup
-     * @return None
-     */
-    public void homePopup() {
-        throw new UnsupportedOperationException();
-    }
-
-    /**
-     * Method to exit current page and return to
-     * main_page1 if high score equals 0, otherwise
-     * return to main_page2
-     * @return None
-     */
-    public void homePopupYes() {
-        throw new UnsupportedOperationException();
-    }
-
-    /**
-     * Method to close return to main page popup
-     * @return None
-     */
-    public void homePopupNo() {
-        throw new UnsupportedOperationException();
+        if (randNumStr.equalsIgnoreCase(userInput)) {
+            correctInput();
+            return true;
+        }
+        else {
+            incorrectInput();
+            return false;
+        }
     }
 
     /**
@@ -96,53 +90,151 @@ public class NumGameModel {
      * easy (1) = 1 points each correct user guess
      * medium (2) = 2 points each correct user guess
      * hard (3) = 3 points each correct user guess
+     *
      * @return int
      */
-    public int selectDifficulty() {
-        throw new UnsupportedOperationException();
-    }
+    public static int[] selectDifficulty(int userselection) {
+        if (userselection == 1) {
+            difficulty = 1;
 
-    /**
-     * Method to call generateRandomNumber() and add
-     * a new number to the sequence needed to memorize
-     * @return None
-     */
-    public void addToSequence() {
-        throw new UnsupportedOperationException();
+        } else if (userselection == 2) {
+            difficulty = 2;
+        } else {
+            difficulty = 3;
+        }
+        return generateRandomNumber(difficulty);
     }
 
     /**
      * Method to update user's high score if latestScore
      * is greater than previous high score
+     *
      * @return None
      */
-    public void updateHighScore() {
-        throw new UnsupportedOperationException();
+    public static void updateHighScore() {
+        if (highScore < latestScore) {
+            highScore = latestScore;
+        }
     }
 
     /**
      * Method to update user's latest score whenever user
-     * corrects the sequence correctly
+     * enters the sequence correctly
+     *
      * @return None
      */
-    public void updateLatestScore() {
-        throw new UnsupportedOperationException();
+    public static void updateLatestScore() {
+        if (isCorrect && difficulty == 1) {
+            latestScore += 1;
+        } else if (isCorrect && difficulty == 2) {
+            latestScore += 2;
+        } else if (isCorrect && difficulty == 3) {
+            latestScore += 3;
+        }
     }
 
     /**
-     * Method to check if user's input matches the sequence needed
-     * to be memorized and call correctInput() if correct input
-     * and call incorrectInput() if incorrect input
-     * @return None
+     * Method to return user's high score
+     *
+     * @return int
      */
-    public void checkInput() {
-        throw new UnsupportedOperationException();
+    public static int getHighScore() {
+        return highScore;
+    }
+
+    /**
+     * Method to return user's latest score
+     *
+     * @return int
+     */
+    public static int getLatestScore() {
+        return latestScore;
     }
 
 
+    /**
+     * Helper Method to return the random number sequence
+     *
+     * @return int[]
+     */
+    public static int[] getNumList() {
+        return randNumList;
+    }
 
+    /**
+     * Helper Method to return difficulty level
+     *
+     * @return int
+     */
+    public static int getDifficulty() {
+        return difficulty;
+    }
 
+    /**
+     * Helper Method to set userGuess
+     *
+     * @return int
+     */
+    public static void setUserGuess(String userGuessInput) {userGuess = userGuessInput;}
 
+    /**
+     * Helper Method to get userGuess
+     *
+     * @return int
+     */
+    public static String getUserGuess() {return userGuess.trim().replace(" ", "");}
 
+    /**
+     * Helper Method remove brackets, commas, and spaces
+     * in array when converting it to string
+     *
+     * @return int
+     */
+    public static String formatArr(String arrayStr) {
+        arrayStr = arrayStr.replace(",", "")
+                .replace("[", "")
+                .replace("]", "")
+                .replace(" ", "")
+                .trim();
+        return arrayStr;
+    }
+
+    /**
+     * Helper method to update generated sequence text size
+     * when text goes off screen
+     *
+     * @return int[]
+     */
+    public static int[] updateSizes() {
+        textSizes[0] += 1;
+        if (count < 7) {
+            textSizes[1] = (int)(textSizes[1] * 0.8);
+        }
+        else {
+            textSizes[1] = (int)(textSizes[1] * 0.9);
+        }
+        count++;
+        return textSizes;
+    }
+
+    /**
+     * Helper method to know when to call updateSizes()
+     *
+     * @return int[]
+     */
+    public static int[] getTextSizes() {
+        return textSizes;
+    }
+
+    /**
+     * Helper method to reset score
+     *
+     * @return none
+     */
+    public static void resetGame() {
+        int[] tempArr = {};
+        randNumList = tempArr;
+        latestScore = 0;
+    }
 
 }
