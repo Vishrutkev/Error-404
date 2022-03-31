@@ -59,24 +59,27 @@ public class NumGameModel {
 
 
     /**
-     * Convert number sequence and user input to string
-     * Check for incorrect input and make latestScore equal to zero if input is incorrect
+     * Method to check for incorrect input and make latestScore equal
+     * to zero if input is incorrect
      *
      * @return None
      */
-    public void incorrectInput(int userInput) {
-        String randNumStr = "";
-        String userInputStr = "";
-
-        for (int i = 0; i < randNumList.length; i++) {
-            randNumStr += randNumList[i];
-        }
-        userInputStr = String.valueOf(userInput);
-        if (!randNumStr.equalsIgnoreCase(userInputStr)) {
-            //displayText
+    public static void incorrectInput() {
             isCorrect = false;
             latestScore = 0;
-        }
+    }
+
+    /**
+     * Method to call updateLatestScore() and generateRandomNumber() and
+     * redirect user to user_sequence_page.xml with a new sequence to input
+     * guess
+     *
+     * @return None
+     */
+    public static void correctInput() {
+        isCorrect = true;
+        generateRandomNumber(difficulty);
+        updateLatestScore();
     }
 
     /**
@@ -87,18 +90,21 @@ public class NumGameModel {
      *
      * @return None
      */
-    public void correctInput(int userInput) {
+    public static Boolean isEquals(String userInput) {
         String randNumStr = "";
-        String userInputStr = "";
 
         for (int i = 0; i < randNumList.length; i++) {
             randNumStr += randNumList[i];
         }
-        userInputStr = String.valueOf(userInput);
-        if (randNumStr.equalsIgnoreCase(userInputStr)) {
-            isCorrect = true;
-            generateRandomNumber(difficulty);
-            updateLatestScore();
+        System.out.println("RandomNum: " + randNumStr);
+        System.out.println("userInput: " + userInput);
+        if (randNumStr.equalsIgnoreCase(userInput)) {
+            correctInput();
+            return true;
+        }
+        else {
+            incorrectInput();
+            return false;
         }
     }
 
@@ -139,7 +145,7 @@ public class NumGameModel {
      *
      * @return None
      */
-    public void updateLatestScore() {
+    public static void updateLatestScore() {
         if (isCorrect && difficulty == 1) {
             latestScore += 1;
         } else if (isCorrect && difficulty == 2) {
