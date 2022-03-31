@@ -22,6 +22,9 @@ public class User_Sequence_Input_Page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_sequence_inputt_page);
         EditText userGuess = (EditText) findViewById(R.id.userGuess);
+        TextView currentScore = findViewById(R.id.currentScoreView);
+
+        currentScore.setText("" + NumGameModel.getLatestScore());
 
         checkbutton = (Button) findViewById(R.id.checkButton);
         checkbutton.setOnClickListener(new View.OnClickListener() {

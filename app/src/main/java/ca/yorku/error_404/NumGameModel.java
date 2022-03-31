@@ -34,34 +34,6 @@ public class NumGameModel {
         return randNumList;
     }
 
-    /** Convert int to int[]
-     *
-     */
-
-    public static int[] Int_to_array(int n)
-    {
-        int j = 0;
-        int len = Integer.toString(n).length();
-        int[] arr = new int[len];
-        while(n!=0)
-        {
-            arr[len-j-1] = n%10;
-            n=n/10;
-            j++;
-        }
-        return arr;
-    }
-
-    /**  Check if the Arrays are equal or not?
-     *
-     */
-
-    public static boolean trueorFalse(int[] genNum, int[] num1){
-        return Arrays.equals(num1, genNum);
-
-    }
-
-
 
     /**
      * Method to check for incorrect input and make latestScore equal
@@ -75,8 +47,9 @@ public class NumGameModel {
     }
 
     /**
-     * Method to call updateLatestScore() and generateRandomNumber() and
-     * redirect user to user_sequence_page.xml with a new sequence to input
+     * Method to call updateLatestScore() and generateRandomNumber() udpate
+     * latest score and redirect user to user_sequence_page.xml with a
+     * new sequence to input
      * guess
      *
      * @return None
@@ -85,12 +58,13 @@ public class NumGameModel {
         isCorrect = true;
         generateRandomNumber(difficulty);
         updateLatestScore();
+        updateHighScore();
     }
 
     /**
      * Convert number sequence and user input to string
      * Check for correct input and make isCorrect equal true
-     * Method to call updateLatestScore() and addToSequence() and redirect
+     * Method to call correctInput() and redirect
      * user to user_sequence_page.xml with a new sequence to input guess
      *
      * @return None
@@ -138,7 +112,7 @@ public class NumGameModel {
      *
      * @return None
      */
-    public void updateHighScore(int latestScore) {
+    public static void updateHighScore() {
         if (highScore < latestScore) {
             highScore = latestScore;
         }
@@ -168,6 +142,16 @@ public class NumGameModel {
     public static int getHighScore() {
         return highScore;
     }
+
+    /**
+     * Method to return user's latest score
+     *
+     * @return int
+     */
+    public static int getLatestScore() {
+        return latestScore;
+    }
+
 
     /**
      * Helper Method to return the random number sequence

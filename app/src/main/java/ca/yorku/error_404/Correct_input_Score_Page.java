@@ -8,6 +8,7 @@ import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class Correct_input_Score_Page extends AppCompatActivity {
     private Button nextroundbutton;
@@ -17,6 +18,9 @@ public class Correct_input_Score_Page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.correct_inputt_score_page);
+
+        TextView currentScore = findViewById(R.id.currentScore2View);
+        currentScore.setText("" + NumGameModel.getLatestScore());
 
         nextroundbutton = (Button) findViewById(R.id.nextRoundbutton);
         nextroundbutton.setOnClickListener(new View.OnClickListener() {
