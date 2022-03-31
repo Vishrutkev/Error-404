@@ -35,6 +35,7 @@ public class Incorrect_input_Score_Page extends AppCompatActivity {
         returnToMainPageBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                System.out.println("HihsCore: " + NumGameModel.getHighScore());
                 if (NumGameModel.getHighScore() == 0) {
                     Intent intent = new Intent(Incorrect_input_Score_Page.this, MainActivity.class);
                     startActivity(intent);
