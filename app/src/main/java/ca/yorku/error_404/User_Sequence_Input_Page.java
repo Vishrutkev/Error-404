@@ -28,7 +28,8 @@ public class User_Sequence_Input_Page extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String userGuessStr = userGuess.getText().toString();
-                System.out.println("userGuessStr: " + userGuessStr);
+                NumGameModel.setUserGuess(userGuessStr);
+
                 Boolean isGuessCorrect = NumGameModel.isEquals(userGuessStr);
                 if (isGuessCorrect) {
                     Intent intent1 = new Intent(User_Sequence_Input_Page.this, Correct_input_Score_Page.class);

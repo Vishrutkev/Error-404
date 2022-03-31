@@ -11,6 +11,8 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import java.util.Arrays;
+
 public class Incorrect_input_Score_Page extends AppCompatActivity {
     private long mLastClickTime = 0;
 
@@ -25,6 +27,10 @@ public class Incorrect_input_Score_Page extends AppCompatActivity {
 
         TextView numSequenceView = findViewById(R.id.numSeqView);
         TextView userGuessView = findViewById(R.id.userGuessView);
+
+        String numSeqView = Arrays.toString(NumGameModel.getNumList());
+        numSequenceView.setText(NumGameModel.formatArr(numSeqView));
+        userGuessView.setText(NumGameModel.getUserGuess());
 
         returnToMainPageBtn.setOnClickListener(new View.OnClickListener() {
             @Override

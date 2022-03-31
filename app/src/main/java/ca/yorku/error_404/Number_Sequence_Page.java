@@ -15,18 +15,15 @@ import java.util.Arrays;
 public class Number_Sequence_Page extends AppCompatActivity {
     private Button readybutton;
     private long mLastClickTime = 0;
-    TextView genSe;
-    String st;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.number_sequence__page);
-        genSe = findViewById(R.id.genSeq);
+        TextView genSeq = findViewById(R.id.genSeq);
 
-//        st = getIntent().getExtras().getString("value");
-        genSe.setText(Arrays.toString(NumGameModel.getNumList()));
+        genSeq.setText(NumGameModel.formatArr(Arrays.toString(NumGameModel.getNumList())));
 
 
         readybutton = (Button) findViewById(R.id.readyButton);

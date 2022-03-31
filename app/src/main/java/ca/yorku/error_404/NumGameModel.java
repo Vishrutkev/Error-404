@@ -18,6 +18,7 @@ public class NumGameModel {
     private static int highScore = 0;
     private static int latestScore = 0;
     private static boolean isCorrect;
+    private static String userGuess = "";
 
     public static int[] generateRandomNumber(int difficulty) {
         Random rnd = new Random();
@@ -96,8 +97,7 @@ public class NumGameModel {
         for (int i = 0; i < randNumList.length; i++) {
             randNumStr += randNumList[i];
         }
-        System.out.println("RandomNum: " + randNumStr);
-        System.out.println("userInput: " + userInput);
+
         if (randNumStr.equalsIgnoreCase(userInput)) {
             correctInput();
             return true;
@@ -181,6 +181,28 @@ public class NumGameModel {
      */
     public static int getDifficulty() {
         return difficulty;
+    }
+
+    /**
+     * Helper Method to set userGuess
+     *
+     * @return int
+     */
+    public static void setUserGuess(String userGuessInput) {userGuess = userGuessInput;}
+
+    /**
+     * Helper Method to get userGuess
+     *
+     * @return int
+     */
+    public static String getUserGuess() {return userGuess.trim().replace(" ", "");}
+
+    public static String formatArr(String arrayStr) {
+        arrayStr = arrayStr.replace(",", "")
+                .replace("[", "")
+                .replace("]", "")
+                .trim();
+        return arrayStr;
     }
 
 }
