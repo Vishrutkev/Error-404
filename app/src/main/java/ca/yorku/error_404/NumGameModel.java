@@ -5,14 +5,6 @@ import java.util.Random;
 
 public class NumGameModel {
 
-    /**
-     * Method to to generate a random double value
-     * For loop to generate 1,2 or 3 random numbers depending on the users difficulty selection
-     * Adds generated random nunmber to the end of the memorization sequence
-     *
-     * @param difficulty int type for difficulty level user selected
-     * @return int from 1-9
-     */
     private static int difficulty = 0;
     private static int[] randNumList = {};
     private static int highScore = 0;
@@ -23,6 +15,18 @@ public class NumGameModel {
     private static int textSize = 36;
     private static int[] textSizes = {maxLength, textSize};
     private static int count = 0;
+
+    private NumGameModel() {
+    }
+
+    /**
+     * Method to to generate a random double value
+     * For loop to generate 1,2 or 3 random numbers depending on the users difficulty selection
+     * Adds generated random nunmber to the end of the memorization sequence
+     *
+     * @param difficulty int type for difficulty level user selected
+     * @return int from 1-9
+     */
 
     public static int[] generateRandomNumber(int difficulty) {
         Random rnd = new Random();
@@ -42,7 +46,7 @@ public class NumGameModel {
      * @return None
      */
     public static void incorrectInput() {
-            isCorrect = false;
+        isCorrect = false;
     }
 
     /**
@@ -78,8 +82,7 @@ public class NumGameModel {
         if (randNumStr.equalsIgnoreCase(userInput)) {
             correctInput();
             return true;
-        }
-        else {
+        } else {
             incorrectInput();
             return false;
         }
@@ -96,7 +99,6 @@ public class NumGameModel {
     public static int[] selectDifficulty(int userselection) {
         if (userselection == 1) {
             difficulty = 1;
-
         } else if (userselection == 2) {
             difficulty = 2;
         } else {
@@ -151,6 +153,51 @@ public class NumGameModel {
         return latestScore;
     }
 
+    /**
+     * Method to set latest score for testing
+     *
+     * @return none
+     */
+    public static void setLatestScore(int latestScoreTest) {
+        latestScore = latestScoreTest;
+    }
+
+    /**
+     * Method to set high score for testing
+     *
+     * @return none
+     */
+    public static void setHighScore(int highScoreTest) {
+        highScore = highScoreTest;
+    }
+
+    /**
+     * Method to set RandNumList for testing
+     *
+     * @return none
+     */
+    public static void setRandNumList(int[] randNumListTest) {
+        randNumList = randNumListTest;
+    }
+
+    /**
+     * Method to set isCorrect for testing
+     *
+     * @return none
+     */
+    public static void setIsCorrect(boolean isCorrectTest) {
+        isCorrect = isCorrectTest;
+    }
+
+    /**
+     * Method to set difficulty for testing
+     *
+     * @return none
+     */
+    public static void setDifficulty(int difficultyTest) {
+        difficulty = difficultyTest;
+    }
+
 
     /**
      * Helper Method to return the random number sequence
@@ -162,27 +209,22 @@ public class NumGameModel {
     }
 
     /**
-     * Helper Method to return difficulty level
-     *
-     * @return int
-     */
-    public static int getDifficulty() {
-        return difficulty;
-    }
-
-    /**
      * Helper Method to set userGuess
      *
      * @return int
      */
-    public static void setUserGuess(String userGuessInput) {userGuess = userGuessInput;}
+    public static void setUserGuess(String userGuessInput) {
+        userGuess = userGuessInput;
+    }
 
     /**
      * Helper Method to get userGuess
      *
      * @return int
      */
-    public static String getUserGuess() {return userGuess.trim().replace(" ", "");}
+    public static String getUserGuess() {
+        return userGuess.trim().replace(" ", "");
+    }
 
     /**
      * Helper Method remove brackets, commas, and spaces
@@ -208,10 +250,9 @@ public class NumGameModel {
     public static int[] updateSizes() {
         textSizes[0] += 1;
         if (count < 7) {
-            textSizes[1] = (int)(textSizes[1] * 0.8);
-        }
-        else {
-            textSizes[1] = (int)(textSizes[1] * 0.9);
+            textSizes[1] = (int) (textSizes[1] * 0.8);
+        } else {
+            textSizes[1] = (int) (textSizes[1] * 0.9);
         }
         count++;
         return textSizes;
