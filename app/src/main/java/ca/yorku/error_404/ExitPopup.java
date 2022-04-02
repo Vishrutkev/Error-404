@@ -37,6 +37,7 @@ public class ExitPopup extends Activity {
         yesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                NumGameModel.resetGame();
                 if (NumGameModel.getHighScore() == 0) {
                     Intent intent = new Intent(ExitPopup.this, MainActivity.class);
                     startActivity(intent);
