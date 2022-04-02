@@ -2,6 +2,7 @@ package ca.yorku.error_404;
 
 import org.junit.Test;
 
+import java.awt.font.NumericShaper;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -18,7 +19,8 @@ public class NumGameModelTest {
         int[] randNumList = NumGameModel.generateRandomNumber(difficulty);
         int expectedArrLength = difficulty;
 
-        org.junit.Assert.assertTrue("Incorrect generated number length" , expectedArrLength == randNumList.length);
+        org.junit.Assert.assertTrue("Incorrect generated number length", expectedArrLength == randNumList.length);
+        NumGameModel.resetGame();
     }
 
     /**
@@ -33,10 +35,10 @@ public class NumGameModelTest {
         int[] expectedNumList = new int[0];
         for (int i = 0; i < 2; i++) {
             randNumList = NumGameModel.generateRandomNumber(difficulty);
-            expectedNumList = Arrays.copyOf(randNumList, expectedNumList.length + 1);
+            expectedNumList = Arrays.copyOf(randNumList, expectedNumList.length + difficulty);
         }
-
         org.junit.Assert.assertArrayEquals(expectedNumList, randNumList);
+        NumGameModel.resetGame();
     }
 
     /**
@@ -45,7 +47,11 @@ public class NumGameModelTest {
      */
     @Test
     public void test_incorrectInput01() {
-        throw new UnsupportedOperationException();
+        int[] randNumList = {2, 3, 4, 9, 3};
+        String userInput = "43563";
+
+        org.junit.Assert.assertEquals(false, NumGameModel.isEquals(userInput));
+        NumGameModel.resetGame();
     }
 
     /**
@@ -54,7 +60,11 @@ public class NumGameModelTest {
      */
     @Test
     public void test_correctInput01() {
-        throw new UnsupportedOperationException();
+        NumGameModel.setRandNumList(new int[]{4, 9, 9, 5, 2});
+        String userInput = "49952";
+
+        org.junit.Assert.assertEquals(true, NumGameModel.isEquals(userInput));
+        NumGameModel.resetGame();
     }
 
     /**
@@ -63,7 +73,8 @@ public class NumGameModelTest {
     @Test
     public void test_selectDifficulty01() {
         //generate random num 1-3 as userSelection input and compare with difficulty
-        throw new UnsupportedOperationException();
+        org.junit.Assert.assertEquals(1, NumGameModel.selectDifficulty(1).length);
+        NumGameModel.resetGame();
     }
 
     /**
@@ -73,7 +84,9 @@ public class NumGameModelTest {
     @Test
     public void test_selectDifficulty02() {
         //generate random num 1-3 as userSelection input and compare with difficulty
-        throw new UnsupportedOperationException();
+
+        org.junit.Assert.assertEquals(2, NumGameModel.selectDifficulty(2).length);
+        NumGameModel.resetGame();
     }
 
     /**
@@ -81,7 +94,13 @@ public class NumGameModelTest {
      */
     @Test
     public void test_updateHighScore01() {
-        throw new UnsupportedOperationException();
+        NumGameModel.setHighScore(10);
+        NumGameModel.setLatestScore(11);
+        NumGameModel.updateHighScore();
+        int result = NumGameModel.getHighScore();
+
+        org.junit.Assert.assertEquals(11, result);
+        NumGameModel.resetGame();
     }
 
     /**
@@ -89,7 +108,13 @@ public class NumGameModelTest {
      */
     @Test
     public void test_updateHighScore02() {
-        throw new UnsupportedOperationException();
+        NumGameModel.setHighScore(10);
+        NumGameModel.setLatestScore(3);
+        NumGameModel.updateHighScore();
+        int result = NumGameModel.getHighScore();
+
+        org.junit.Assert.assertEquals(10, result);
+        NumGameModel.resetGame();
     }
 
     /**
@@ -98,7 +123,14 @@ public class NumGameModelTest {
      */
     @Test
     public void test_updateLatestScore01() {
-        throw new UnsupportedOperationException();
+        NumGameModel.setIsCorrect(true);
+        NumGameModel.setDifficulty(3);
+        NumGameModel.setLatestScore(0);
+        NumGameModel.updateLatestScore();
+        int result = NumGameModel.getLatestScore();
+
+        org.junit.Assert.assertEquals(3, result);
+        NumGameModel.resetGame();
     }
 
     /**
@@ -106,7 +138,15 @@ public class NumGameModelTest {
      */
     @Test
     public void test_updateLatestScore02() {
-        throw new UnsupportedOperationException();
+        NumGameModel.setIsCorrect(false);
+        NumGameModel.setDifficulty(3);
+        NumGameModel.setLatestScore(10);
+        NumGameModel.updateLatestScore();
+        int result = NumGameModel.getLatestScore();
+
+        org.junit.Assert.assertEquals(10, result);
+        NumGameModel.resetGame();
     }
 
 }
+

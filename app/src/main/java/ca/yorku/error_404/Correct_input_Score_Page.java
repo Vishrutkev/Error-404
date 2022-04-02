@@ -43,7 +43,6 @@ public class Correct_input_Score_Page extends AppCompatActivity {
 
                 Intent intent = new Intent(Correct_input_Score_Page.this, HelpPopup.class);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -58,7 +57,6 @@ public class Correct_input_Score_Page extends AppCompatActivity {
 
                 Intent intent = new Intent(Correct_input_Score_Page.this, ExitPopup.class);
                 startActivity(intent);
-                finish();
             }
         });
 
