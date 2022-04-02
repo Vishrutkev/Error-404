@@ -2,6 +2,7 @@ package ca.yorku.error_404;
 
 import org.junit.Test;
 
+import java.awt.font.NumericShaper;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -19,6 +20,7 @@ public class NumGameModelTest {
         int expectedArrLength = difficulty;
 
         org.junit.Assert.assertTrue("Incorrect generated number length", expectedArrLength == randNumList.length);
+        NumGameModel.resetGame();
     }
 
     /**
@@ -36,33 +38,33 @@ public class NumGameModelTest {
             expectedNumList = Arrays.copyOf(randNumList, expectedNumList.length + difficulty);
         }
         org.junit.Assert.assertArrayEquals(expectedNumList, randNumList);
+        NumGameModel.resetGame();
     }
 
     /**
      * Test if userInput is incorrect by checking if isCorrect boolean
-     * turns false and latestScore turns 0
+     * turns false
      */
     @Test
     public void test_incorrectInput01() {
         int[] randNumList = {2, 3, 4, 9, 3};
-        int userInput = 43563;
-        NumGameModel.incorrectInput(userInput);
+        String userInput = "43563";
 
-        org.junit.Assert.assertEquals(0, NumGameModel.getLatestScore());
-        org.junit.Assert.assertEquals(false, NumGameModel.getIsCorrect());
+        org.junit.Assert.assertEquals(false, NumGameModel.isEquals(userInput));
+        NumGameModel.resetGame();
     }
 
     /**
      * Test if userInput is correct by checking if isCorrect boolean
-     * turns true and latestScore is not 0
+     * turns true
      */
     @Test
     public void test_correctInput01() {
-        int[] randNumList = {4, 9, 9, 5, 2};
-        int userInput = 49952;
-        NumGameModel.correctInput(userInput);
+        NumGameModel.setRandNumList(new int[]{4, 9, 9, 5, 2});
+        String userInput = "49952";
 
-        org.junit.Assert.assertEquals(true, NumGameModel.getIsCorrect());
+        org.junit.Assert.assertEquals(true, NumGameModel.isEquals(userInput));
+        NumGameModel.resetGame();
     }
 
     /**
@@ -71,25 +73,20 @@ public class NumGameModelTest {
     @Test
     public void test_selectDifficulty01() {
         //generate random num 1-3 as userSelection input and compare with difficulty
-        Random rnd = new Random();
-        int randDifficulty = rnd.nextInt(3) + 1;
-        int difficulty = NumGameModel.selectDifficulty(randDifficulty);
-
-        org.junit.Assert.assertEquals(randDifficulty, difficulty);
+        org.junit.Assert.assertEquals(1, NumGameModel.selectDifficulty(1).length);
+        NumGameModel.resetGame();
     }
 
     /**
-     * Test if difficulty doesn't match with userSelection
-     * then throw IllegalArgumentException
+     * Test if difficulty will match with userSelection
+     *
      */
     @Test
     public void test_selectDifficulty02() {
         //generate random num 1-3 as userSelection input and compare with difficulty
-        Random rnd = new Random();
-        int randDifficulty = rnd.nextInt(3) + 1;
-        int difficulty = NumGameModel.selectDifficulty(randDifficulty);
 
-        org.junit.Assert.assertEquals(randDifficulty, difficulty);
+        org.junit.Assert.assertEquals(2, NumGameModel.selectDifficulty(2).length);
+        NumGameModel.resetGame();
     }
 
     /**
@@ -97,12 +94,13 @@ public class NumGameModelTest {
      */
     @Test
     public void test_updateHighScore01() {
-        int highScore = 10;
-        int latestScore = 11;
-        NumGameModel.updateHighScore(latestScore);
+        NumGameModel.setHighScore(10);
+        NumGameModel.setLatestScore(11);
+        NumGameModel.updateHighScore();
         int result = NumGameModel.getHighScore();
 
         org.junit.Assert.assertEquals(11, result);
+        NumGameModel.resetGame();
     }
 
     /**
@@ -110,12 +108,13 @@ public class NumGameModelTest {
      */
     @Test
     public void test_updateHighScore02() {
-        int highScore = 10;
-        int latestScore = 3;
-        NumGameModel.updateHighScore(latestScore);
+        NumGameModel.setHighScore(10);
+        NumGameModel.setLatestScore(3);
+        NumGameModel.updateHighScore();
         int result = NumGameModel.getHighScore();
 
         org.junit.Assert.assertEquals(10, result);
+        NumGameModel.resetGame();
     }
 
     /**
@@ -124,7 +123,14 @@ public class NumGameModelTest {
      */
     @Test
     public void test_updateLatestScore01() {
-        throw new UnsupportedOperationException();
+        NumGameModel.setIsCorrect(true);
+        NumGameModel.setDifficulty(3);
+        NumGameModel.setLatestScore(0);
+        NumGameModel.updateLatestScore();
+        int result = NumGameModel.getLatestScore();
+
+        org.junit.Assert.assertEquals(3, result);
+        NumGameModel.resetGame();
     }
 
     /**
@@ -132,7 +138,15 @@ public class NumGameModelTest {
      */
     @Test
     public void test_updateLatestScore02() {
-        throw new UnsupportedOperationException();
+        NumGameModel.setIsCorrect(false);
+        NumGameModel.setDifficulty(3);
+        NumGameModel.setLatestScore(10);
+        NumGameModel.updateLatestScore();
+        int result = NumGameModel.getLatestScore();
+
+        org.junit.Assert.assertEquals(10, result);
+        NumGameModel.resetGame();
     }
 
 }
+

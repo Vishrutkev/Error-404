@@ -43,6 +43,7 @@
         android:layout_height="118dp"
         android:text="Memorize The\nSequence"
         android:textAlignment="center"
+        android:textColor="#333131"
         android:textSize="40sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -53,11 +54,11 @@
 
     <TextView
         android:id="@+id/genSeq"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="503dp"
+        android:layout_height="154dp"
         android:ellipsize="none"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="none"
         android:maxLines="4"
         android:scrollHorizontally="false"
         android:singleLine="false"
@@ -74,14 +75,15 @@
         android:id="@+id/readyButton"
         android:layout_width="167dp"
         android:layout_height="55dp"
+        android:backgroundTint="#504E4E"
         android:rotationX="2"
         android:text="Ready"
-        android:backgroundTint="#504E4E"
         android:textSize="16sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/genSeq" />
+        app:layout_constraintTop_toBottomOf="@+id/genSeq"
+        app:layout_constraintVertical_bias="0.256" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
