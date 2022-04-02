@@ -54,8 +54,8 @@
 
     <TextView
         android:id="@+id/genSeq"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="503dp"
+        android:layout_height="154dp"
         android:ellipsize="none"
         android:ems="10"
         android:inputType="none"
@@ -75,14 +75,15 @@
         android:id="@+id/readyButton"
         android:layout_width="167dp"
         android:layout_height="55dp"
+        android:backgroundTint="#504E4E"
         android:rotationX="2"
         android:text="Ready"
-        android:backgroundTint="#504E4E"
         android:textSize="16sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/genSeq" />
+        app:layout_constraintTop_toBottomOf="@+id/genSeq"
+        app:layout_constraintVertical_bias="0.256" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
