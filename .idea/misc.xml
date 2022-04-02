@@ -39,6 +39,8 @@
         <entry key="app/src/main/res/layout/correct_inputt_score_page.xml" value="0.25" />
         <entry key="app/src/main/res/layout/difficulty_selection_page.xml" value="0.1" />
         <entry key="app/src/main/res/layout/dificulty_selection_page.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/exit_popup.xml" value="0.28541666666666665" />
+        <entry key="app/src/main/res/layout/help_popup.xml" value="0.25" />
         <entry key="app/src/main/res/layout/incorrect_input_score_page.xml" value="0.2171875" />
         <entry key="app/src/main/res/layout/incorrect_inputt_score_page.xml" value="0.23140716552734378" />
         <entry key="app/src/main/res/layout/main_page1.xml" value="0.165" />

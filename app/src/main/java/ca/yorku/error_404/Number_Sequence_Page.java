@@ -5,36 +5,46 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import java.util.Arrays;
+
 public class Number_Sequence_Page extends AppCompatActivity {
+    private static final String TAG = "\n";
     private Button readybutton;
     private long mLastClickTime = 0;
-    TextView genSe;
-    String st;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.number_sequence__page);
-        genSe = findViewById(R.id.genSeq);
+        TextView genSeq = findViewById(R.id.genSeq);
 
-        st = getIntent().getExtras().getString("value");
-        genSe.setText(st);
+        String tempString = NumGameModel.formatArr(Arrays.toString(NumGameModel.getNumList()));
 
+
+        if (tempString.length() > NumGameModel.getTextSizes()[0]) {
+            genSeq.setTextSize(TypedValue.COMPLEX_UNIT_SP, NumGameModel.getTextSizes()[1]);
+            genSeq.setText(tempString);
+            NumGameModel.updateSizes();
+        }
+        else {
+            genSeq.setText(tempString);
+        }
 
         readybutton = (Button) findViewById(R.id.readyButton);
         readybutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Number_Sequence_Page.this, User_Sequence_Input_Page.class);
-                intent.putExtra("value1", genSe.getText());
                 startActivity(intent);
-
+                finish();
             }
         });
 
@@ -51,6 +61,7 @@ public class Number_Sequence_Page extends AppCompatActivity {
 
                 Intent intent = new Intent(Number_Sequence_Page.this, HelpPopup.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -63,7 +74,8 @@ public class Number_Sequence_Page extends AppCompatActivity {
                 mLastClickTime = SystemClock.elapsedRealtime();
 
                 Intent intent = new Intent(Number_Sequence_Page.this, ExitPopup.class);
-
+                startActivity(intent);
+                finish();
             }
         });
     }

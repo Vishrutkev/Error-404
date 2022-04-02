@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#52B9E6"
     tools:context=".Incorrect_input_Score_Page">
 
     <ImageButton
@@ -40,6 +41,7 @@
         android:layout_height="146dp"
         android:text="Incorrect\nInput!"
         android:textAlignment="center"
+        android:textColor="#333131"
         android:textSize="44sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -50,11 +52,12 @@
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="88dp"
-        android:layout_height="29dp"
+        android:layout_width="131dp"
+        android:layout_height="45dp"
         android:text="Sequence"
         android:textAlignment="center"
-        android:textSize="18sp"
+        android:textColor="#1B1414"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -63,11 +66,16 @@
         app:layout_constraintVertical_bias="0.096" />
 
     <TextView
-        android:id="@+id/editTextNumber5"
+        android:id="@+id/numSeqView"
         android:layout_width="188dp"
         android:layout_height="42dp"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="none"
+        android:maxEms="10"
+        android:singleLine="false"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -77,23 +85,29 @@
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="117dp"
-        android:layout_height="30dp"
+        android:layout_width="211dp"
+        android:layout_height="56dp"
         android:text="You Guessed.."
         android:textAlignment="center"
-        android:textSize="18sp"
+        android:textColor="#1B1414"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber5"
+        app:layout_constraintTop_toBottomOf="@+id/numSeqView"
         app:layout_constraintVertical_bias="0.157" />
 
     <TextView
-        android:id="@+id/editTextNumber6"
-        android:layout_width="188dp"
-        android:layout_height="42dp"
+        android:id="@+id/userGuessView"
+        android:layout_width="196dp"
+        android:layout_height="49dp"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="none"
+        android:maxEms="10"
+        android:singleLine="false"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -103,14 +117,16 @@
 
     <Button
         android:id="@+id/returntoMainpagebutton"
-        android:layout_width="167dp"
-        android:layout_height="55dp"
+        android:layout_width="194dp"
+        android:layout_height="66dp"
+        android:backgroundTint="#504E4E"
         android:text="Return To\nMain Page"
-        android:textSize="16sp"
+        android:textSize="18sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber6"
-        app:layout_constraintVertical_bias="0.538" />
+        app:layout_constraintTop_toBottomOf="@+id/userGuessView"
+        app:layout_constraintVertical_bias="0.418" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

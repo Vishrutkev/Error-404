@@ -6,11 +6,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
+
+import java.util.Arrays;
 
 public class Incorrect_input_Score_Page extends AppCompatActivity {
     private long mLastClickTime = 0;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +23,28 @@ public class Incorrect_input_Score_Page extends AppCompatActivity {
 
         ImageButton helpPopupBtn = (ImageButton) findViewById(R.id.helpIconButton);
         ImageButton exitPopupBtn = (ImageButton) findViewById(R.id.exitIconButton);
+        Button returnToMainPageBtn = findViewById(R.id.returntoMainpagebutton);
+
+        TextView numSequenceView = findViewById(R.id.numSeqView);
+        TextView userGuessView = findViewById(R.id.userGuessView);
+
+        String numSeqView = Arrays.toString(NumGameModel.getNumList());
+        numSequenceView.setText(NumGameModel.formatArr(numSeqView));
+        userGuessView.setText(NumGameModel.getUserGuess());
+
+        returnToMainPageBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (NumGameModel.getHighScore() == 0) {
+                    Intent intent = new Intent(Incorrect_input_Score_Page.this, MainActivity.class);
+                    startActivity(intent);
+                }
+                else {
+                    Intent intent = new Intent(Incorrect_input_Score_Page.this, MainPage2.class);
+                    startActivity(intent);
+                }
+            }
+        });
 
         helpPopupBtn.setOnClickListener(new View.OnClickListener() {
             @Override

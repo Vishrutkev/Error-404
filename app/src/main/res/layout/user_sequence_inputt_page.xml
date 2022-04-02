@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".User_Sequence_Input_Page">
+    tools:context=".User_Sequence_Input_Page"
+    android:background="#52B9E6">
 
     <ImageButton
         android:id="@+id/exitIconButton"
@@ -40,6 +41,7 @@
         android:layout_height="135dp"
         android:text="Guess The\nSequence!"
         android:textAlignment="center"
+        android:textColor="#333131"
         android:textSize="43sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -53,7 +55,9 @@
         android:layout_width="322dp"
         android:layout_height="49dp"
         android:ems="10"
-        android:inputType="text"
+        android:inputType="none|number"
+        android:textAlignment="center"
+        android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -63,11 +67,12 @@
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="112dp"
-        android:layout_height="26dp"
+        android:layout_width="152dp"
+        android:layout_height="48dp"
         android:text="Current Score:"
         android:textAlignment="center"
-        android:textSize="18sp"
+        android:textColor="#1B1414"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.395"
@@ -76,11 +81,14 @@
         app:layout_constraintVertical_bias="0.208" />
 
     <TextView
-        android:id="@+id/editTextNumber10"
-        android:layout_width="123dp"
-        android:layout_height="36dp"
+        android:id="@+id/currentScoreView"
+        android:layout_width="128dp"
+        android:layout_height="43dp"
         android:ems="10"
-        android:inputType="number"
+        android:inputType="none"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -92,10 +100,12 @@
         android:id="@+id/checkButton"
         android:layout_width="167dp"
         android:layout_height="55dp"
+        android:backgroundTint="#504E4E"
         android:rotationX="2"
         android:rotationY="1"
         android:text="Check"
         android:textSize="20sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

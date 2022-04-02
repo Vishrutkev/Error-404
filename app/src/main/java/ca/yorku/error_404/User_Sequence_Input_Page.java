@@ -21,28 +21,23 @@ public class User_Sequence_Input_Page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_sequence_inputt_page);
-        EditText userGues = (EditText) findViewById(R.id.userGuess);
+        EditText userGuess = (EditText) findViewById(R.id.userGuess);
+        TextView currentScore = findViewById(R.id.currentScoreView);
 
-
+        currentScore.setText("" + NumGameModel.getLatestScore());
 
         checkbutton = (Button) findViewById(R.id.checkButton);
         checkbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String str = getIntent().getExtras().getString("value1");
-                int int1 = Integer.parseInt(userGues.getText().toString());
-                String str1 = Integer.toString(int1);
-                //String str = getIntent().getExtras().getString("value");
-//                int userGue = Integer.parseInt(str1);
-//                int finalValue = Integer. parseInt(str);
-//                int[] num1 = NumGameModel.Int_to_array(finalValue);
-//                int[] num2 = NumGameModel.Int_to_array(userGue);
-//                boolean ans = NumGameModel.trueorFalse(num1,num2);
-                if (str.equals(str1)) {
+                String userGuessStr = userGuess.getText().toString();
+                NumGameModel.setUserGuess(userGuessStr);
+
+                Boolean isGuessCorrect = NumGameModel.isEquals(userGuessStr);
+                if (isGuessCorrect) {
                     Intent intent1 = new Intent(User_Sequence_Input_Page.this, Correct_input_Score_Page.class);
                     startActivity(intent1);
                 } else {
-                   // Toast.makeText(User_Sequence_Input_Page.this," Not equals!",Toast.LENGTH_SHORT);
                     Intent intent2 = new Intent(User_Sequence_Input_Page.this, Incorrect_input_Score_Page.class);
                     startActivity(intent2);
 //                }

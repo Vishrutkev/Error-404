@@ -2,32 +2,55 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EF1313">
+    android:background="#52B9E6">
 
     <TextView
         android:id="@+id/returnHeading"
         android:layout_width="match_parent"
         android:layout_height="170dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="-4dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="-3dp"
         android:text="Are you sure you\nwant to return to\nthe main page?"
         android:textAlignment="center"
-        android:textSize="40sp" />
+        android:textColor="#0E0606"
+        android:textSize="40sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/yesButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="YES"
         android:layout_below="@+id/returnHeading"
         android:layout_alignParentLeft="true"
-        android:layout_margin="50dp"/>
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#504E4E"
+        android:text="YES"
+        android:textSize="16sp"
+        android:textStyle="bold|italic" />
 
     <Button
         android:id="@+id/noButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NO"
         android:layout_below="@+id/returnHeading"
         android:layout_alignParentRight="true"
-        android:layout_margin="50dp"/>
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="49dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#504E4E"
+        android:text="NO"
+        android:textSize="16sp"
+        android:textStyle="bold|italic" />
 
 </RelativeLayout>
