@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".User_Sequence_Input_Page"
+    android:background="#52B9E6">
+
+    <ImageButton
+        android:id="@+id/exitIconButton"
+        android:layout_width="56dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintStart_toEndOf="@+id/helpIconButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/exiticon" />
+
+    <ImageButton
+        android:id="@+id/helpIconButton"
+        android:layout_width="71dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="16dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/helpicon" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="263dp"
+        android:layout_height="135dp"
+        android:text="Guess The\nSequence!"
+        android:textAlignment="center"
+        android:textColor="#333131"
+        android:textSize="43sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/helpIconButton"
+        app:layout_constraintVertical_bias="0.086" />
+
+    <EditText
+        android:id="@+id/userGuess"
+        android:layout_width="322dp"
+        android:layout_height="49dp"
+        android:ems="10"
+        android:inputType="none|number"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.114" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="152dp"
+        android:layout_height="48dp"
+        android:text="Current Score:"
+        android:textAlignment="center"
+        android:textColor="#1B1414"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.395"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userGuess"
+        app:layout_constraintVertical_bias="0.208" />
+
+    <TextView
+        android:id="@+id/currentScoreView"
+        android:layout_width="128dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="none"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/userGuess"
+        app:layout_constraintVertical_bias="0.215" />
+
+    <Button
+        android:id="@+id/checkButton"
+        android:layout_width="167dp"
+        android:layout_height="55dp"
+        android:backgroundTint="#504E4E"
+        android:rotationX="2"
+        android:rotationY="1"
+        android:text="Check"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12"
+        app:layout_constraintVertical_bias="0.479" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

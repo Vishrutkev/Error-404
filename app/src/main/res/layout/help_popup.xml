@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5180DC">
+
+    <TextView
+        android:id="@+id/helpDesc1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="82dp"
+        android:layout_marginEnd="0dp"
+        android:text="Memorize the numerical sequence, click ready\nand guess the sequence correctly to get a point for\nevery new memorized number!"
+        android:textAlignment="center"
+        android:textColor="#070000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/helpDesc2"
+        android:layout_width="345dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/helpDesc1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="67dp"
+        android:layout_marginRight="10dp"
+        android:text="Easy: 1 new digit each round\nMedium: 2 new digits each round\nHard: 3 new digits each round"
+        android:textAlignment="center"
+        android:textColor="#040303"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
