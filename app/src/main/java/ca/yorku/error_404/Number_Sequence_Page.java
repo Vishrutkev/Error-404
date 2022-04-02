@@ -61,7 +61,6 @@ public class Number_Sequence_Page extends AppCompatActivity {
 
                 Intent intent = new Intent(Number_Sequence_Page.this, HelpPopup.class);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -75,7 +74,6 @@ public class Number_Sequence_Page extends AppCompatActivity {
 
                 Intent intent = new Intent(Number_Sequence_Page.this, ExitPopup.class);
                 startActivity(intent);
-                finish();
             }
         });
     }
