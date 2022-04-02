@@ -43,7 +43,7 @@ public class NumGameModelTest {
 
     /**
      * Test if userInput is incorrect by checking if isCorrect boolean
-     * turns false and latestScore turns 0
+     * turns false
      */
     @Test
     public void test_incorrectInput01() {
@@ -56,7 +56,7 @@ public class NumGameModelTest {
 
     /**
      * Test if userInput is correct by checking if isCorrect boolean
-     * turns true and latestScore is not 0
+     * turns true
      */
     @Test
     public void test_correctInput01() {
@@ -78,8 +78,8 @@ public class NumGameModelTest {
     }
 
     /**
-     * Test if difficulty doesn't match with userSelection
-     * then throw IllegalArgumentException
+     * Test if difficulty will match with userSelection
+     *
      */
     @Test
     public void test_selectDifficulty02() {

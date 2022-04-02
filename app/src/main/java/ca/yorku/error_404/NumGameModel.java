@@ -278,4 +278,15 @@ public class NumGameModel {
         latestScore = 0;
     }
 
+
+    /**
+     * Helper method to reset game for exit popup
+     *
+     * @return none
+     */
+    public static void resetGameExitPopup() {
+        int[] tempArr = {};
+        randNumList = tempArr;
+    }
+
 }
