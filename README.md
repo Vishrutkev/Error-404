@@ -14,7 +14,13 @@ Espresso test cases are used to test the app interface.
 
 ## How to Run Project
 
-Clone the project into Android Studio and running the app will run the random number memorization game.
+1. Clone the repository to your local machine.
+
+2. Open the project in Android Studio.
+
+3. Build and run the project on an Android device or emulator.
+
+4. Follow the on-screen instructions to play the game and enjoy!
 
 ## Game Rules
 
@@ -26,3 +32,8 @@ A generated number sequence will be displayed to the user based on the difficult
 Correct input will increment the user's score by the difficulty level (i.e. medium level will add 2 points to the score each correct input).
 
 The user's high score will be kept so when the user's latest score becomes greater than the high score, it will update the high score.
+
+## Contributing
+
+Contributions to this project are welcome. If you encounter any issues or have suggestions for improvement, please open an issue or submit a pull request.
+
